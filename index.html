@@ -3072,8 +3072,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "id": "yichang",
       "order": 2,
       "name": "宜昌",
-      "date": "10/03",
-      "note": "两坝一峡臻享全域游：葛洲坝船闸、西陵峡、三峡大坝与三峡升船机，当天往返武汉。",
+      "date": "10/04",
+      "note": "两坝一峡臻享全域游：葛洲坝船闸、西陵峡、三峡大坝与三峡升船机，10/04当天往返武汉。",
       "coords": [
         30.6919,
         111.2865
@@ -3146,7 +3146,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "routeStops": [
         {
-          "poiId": "wh-hotel-east-lake",
+          "poiId": "wh-hotel-bairuijing",
           "order": 0,
           "time": "15:15",
           "role": "住宿"
@@ -3166,7 +3166,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "transitSegments": [
         {
-          "fromPoiId": "wh-hotel-east-lake",
+          "fromPoiId": "wh-hotel-bairuijing",
           "toPoiId": "wh-tanhuafang",
           "mode": "打车",
           "minutes": 12,
@@ -3296,7 +3296,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "routeStops": [
         {
-          "poiId": "wh-hotel-east-lake",
+          "poiId": "wh-hotel-bairuijing",
           "order": 0,
           "time": "06:15",
           "role": "住宿"
@@ -3352,7 +3352,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "transitSegments": [
         {
-          "fromPoiId": "wh-hotel-east-lake",
+          "fromPoiId": "wh-hotel-bairuijing",
           "toPoiId": "wh-shanhaiguan-road",
           "mode": "地铁+步行",
           "minutes": 30,
@@ -3423,16 +3423,171 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "id": "d1003",
       "short": "10/03",
       "date": "10/03 周六",
+      "city": "武汉",
+      "title": "省博与东湖划船",
+      "summary": "10/3 睡到自然醒，粮道街早午餐；下午湖北省博物馆看越王勾践剑与曾侯乙编钟，随后到楚风园码头乘东湖游船或皮划艇，傍晚凌波门/东湖绿道，晚上楚河汉街吃饭。",
+      "color": "#2F6E8E",
+      "travel": false,
+      "events": [
+        {
+          "time": "09:30",
+          "title": "起床/早午餐",
+          "note": "粮道街或酒店附近；不赶早。",
+          "coords": [
+            30.5455,
+            114.3376
+          ],
+          "routeBreakBefore": true
+        },
+        {
+          "time": "11:00",
+          "title": "粮道街",
+          "note": "豆皮、烧卖、汽水包、面窝；吃完打车去省博南门。",
+          "coords": [
+            30.5495,
+            114.3155
+          ]
+        },
+        {
+          "time": "13:00",
+          "title": "湖北省博物馆",
+          "note": "预约13:00-15:00时段；按越王勾践剑→曾侯乙编钟→梁庄王→陶瓷顺序，约3小时。",
+          "coords": [
+            30.5637,
+            114.3653
+          ]
+        },
+        {
+          "time": "16:30",
+          "title": "楚风园码头",
+          "note": "从省博北门打车约10分钟；东湖游船楚风园—磨山单程约40元、往返约70元。",
+          "coords": [
+            30.5778,
+            114.364
+          ]
+        },
+        {
+          "time": "17:30",
+          "title": "凌波门 / 东湖南路",
+          "note": "从磨山或听涛打车/骑行到凌波门，看日落与湖面；约40分钟。",
+          "coords": [
+            30.5405,
+            114.3665
+          ]
+        },
+        {
+          "time": "19:00",
+          "title": "肥肥虾庄（汉街店）",
+          "note": "或汉街其他餐厅；饭后打车或地铁4号线→中南路换2号线回宝通寺/百瑞景，约20-25分钟。",
+          "coords": [
+            30.553,
+            114.332
+          ]
+        }
+      ],
+      "anchors": [
+        "wh-hubei-museum",
+        "wh-donghu-boat",
+        "wh-lingbomen"
+      ],
+      "routeStops": [
+        {
+          "poiId": "wh-hotel-bairuijing",
+          "order": 0,
+          "time": "09:30",
+          "role": "住宿"
+        },
+        {
+          "poiId": "wh-liangdao-street",
+          "order": 1,
+          "time": "11:00",
+          "role": "过早/午餐"
+        },
+        {
+          "poiId": "wh-hubei-museum",
+          "order": 2,
+          "time": "13:00",
+          "role": "博物馆"
+        },
+        {
+          "poiId": "wh-donghu-boat",
+          "order": 3,
+          "time": "16:30",
+          "role": "划船"
+        },
+        {
+          "poiId": "wh-lingbomen",
+          "order": 4,
+          "time": "17:30",
+          "role": "日落"
+        },
+        {
+          "poiId": "wh-feifei-shrimp-chuhe",
+          "order": 5,
+          "time": "19:00",
+          "role": "吃饭"
+        }
+      ],
+      "transitSegments": [
+        {
+          "fromPoiId": "wh-hotel-bairuijing",
+          "toPoiId": "wh-liangdao-street",
+          "mode": "打车",
+          "minutes": 18,
+          "label": "百瑞景到粮道街约6公里，打车15-20分钟。"
+        },
+        {
+          "fromPoiId": "wh-liangdao-street",
+          "toPoiId": "wh-hubei-museum",
+          "mode": "打车",
+          "minutes": 15,
+          "label": "粮道街到省博南门约4公里，打车15分钟。"
+        },
+        {
+          "fromPoiId": "wh-hubei-museum",
+          "toPoiId": "wh-donghu-boat",
+          "mode": "打车",
+          "minutes": 10,
+          "label": "省博北门到楚风园码头约3公里，打车10分钟。"
+        },
+        {
+          "fromPoiId": "wh-donghu-boat",
+          "toPoiId": "wh-lingbomen",
+          "mode": "打车/骑行",
+          "minutes": 15,
+          "label": "磨山或听涛到凌波门约5公里，打车或绿道骑行15分钟。"
+        },
+        {
+          "fromPoiId": "wh-lingbomen",
+          "toPoiId": "wh-feifei-shrimp-chuhe",
+          "mode": "打车",
+          "minutes": 15,
+          "label": "凌波门到楚河汉街约5公里，打车15分钟。"
+        }
+      ],
+      "candidates": [
+        "wh-donghu-kayak",
+        "wh-east-lake-tingtao",
+        "wh-wuhan-university",
+        "wh-east-lake-eye",
+        "wh-hubei-art-museum",
+        "wh-baotong-temple"
+      ]
+    },
+    {
+      "id": "d1004",
+      "short": "10/04",
+      "date": "10/04 周日",
       "city": "宜昌",
       "title": "宜昌：两坝一峡臻享全域游",
-      "summary": "04:30从东湖酒店出发，D56 05:12武昌→07:31宜昌东；09:00三峡游客中心集合，全天体验葛洲坝船闸、西陵峡、三峡大坝与升船机；晚间D632/D5946回汉口，再回东湖酒店。",
+      "summary": "10/4 04:30从百瑞景出发，D56 05:12武昌→07:31宜昌东；09:00三峡游客中心集合，全天体验葛洲坝船闸、西陵峡、三峡大坝与升船机；晚间D632/D5946回汉口，再回百瑞景。",
       "color": "#C9A227",
       "travel": true,
       "events": [
         {
           "time": "04:30",
           "title": "酒店出发",
-          "note": "打车到武昌站约10-15分钟；带身份证、薄外套、雨具、充电宝。",
+          "note": "百瑞景到武昌站约2-3公里，打车约10分钟；带身份证、薄外套、雨具、充电宝。",
           "coords": [
             30.5455,
             114.3376
@@ -3523,7 +3678,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "time": "22:00",
           "title": "汉口站",
-          "note": "D632 22:00或D5946 22:38到汉口；换2号线回洪山广场/街道口。",
+          "note": "D632 22:00或D5946 22:38到汉口；换2号线回宝通寺/百瑞景。",
           "coords": [
             30.6185,
             114.2555
@@ -3532,7 +3687,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "time": "23:00",
           "title": "回到酒店",
-          "note": "洗漱休息，10/4睡到自然醒。",
+          "note": "洗漱休息，10/5早上飞温州，注意早睡。",
           "coords": [
             30.5455,
             114.3376
@@ -3546,7 +3701,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "routeStops": [
         {
-          "poiId": "wh-hotel-east-lake",
+          "poiId": "wh-hotel-bairuijing",
           "order": 0,
           "time": "04:30",
           "role": "住宿"
@@ -3602,11 +3757,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "transitSegments": [
         {
-          "fromPoiId": "wh-hotel-east-lake",
+          "fromPoiId": "wh-hotel-bairuijing",
           "toPoiId": "wh-wuchang-station",
           "mode": "打车",
-          "minutes": 15,
-          "label": "东湖酒店到武昌站约5公里，凌晨打车10-15分钟；04:50前到站。"
+          "minutes": 10,
+          "label": "百瑞景到武昌站约2-3公里，04:30出发，04:50前到站。"
         },
         {
           "fromPoiId": "wh-wuchang-station",
@@ -3634,7 +3789,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "toPoiId": "yc-gezhouba-ship-lock",
           "mode": "游船",
           "minutes": 30,
-          "label": "上午约08:30过葛洲坝船闸；实际顺序以船方调度为准。"
+          "label": "上午过葛洲坝船闸；实际顺序以船方调度为准。"
         },
         {
           "fromPoiId": "yc-gezhouba-ship-lock",
@@ -3667,161 +3822,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "yc-hange-yuzhuang",
         "yc-huaxiang-xiadian",
         "yc-huji-baozi"
-      ]
-    },
-    {
-      "id": "d1004",
-      "short": "10/04",
-      "date": "10/04 周日",
-      "city": "武汉",
-      "title": "省博与东湖划船",
-      "summary": "睡到自然醒，粮道街早午餐；下午湖北省博物馆看越王勾践剑与曾侯乙编钟，随后到楚风园码头乘东湖游船或皮划艇，傍晚凌波门/东湖绿道，晚上楚河汉街吃饭。",
-      "color": "#2F6E8E",
-      "travel": false,
-      "events": [
-        {
-          "time": "09:30",
-          "title": "起床/早午餐",
-          "note": "粮道街或酒店附近；不赶早。",
-          "coords": [
-            30.5455,
-            114.3376
-          ],
-          "routeBreakBefore": true
-        },
-        {
-          "time": "11:00",
-          "title": "粮道街",
-          "note": "豆皮、烧卖、汽水包、面窝；吃完打车去省博南门。",
-          "coords": [
-            30.5495,
-            114.3155
-          ]
-        },
-        {
-          "time": "13:00",
-          "title": "湖北省博物馆",
-          "note": "预约13:00-15:00时段；按越王勾践剑→曾侯乙编钟→梁庄王→陶瓷顺序，约3小时。",
-          "coords": [
-            30.5637,
-            114.3653
-          ]
-        },
-        {
-          "time": "16:30",
-          "title": "楚风园码头",
-          "note": "从省博北门打车约10分钟；东湖游船楚风园—磨山单程约40元、往返约70元。",
-          "coords": [
-            30.5778,
-            114.364
-          ]
-        },
-        {
-          "time": "17:30",
-          "title": "凌波门 / 东湖南路",
-          "note": "从磨山或听涛打车/骑行到凌波门，看日落与湖面；约40分钟。",
-          "coords": [
-            30.5405,
-            114.3665
-          ]
-        },
-        {
-          "time": "19:00",
-          "title": "肥肥虾庄（汉街店）",
-          "note": "或汉街其他餐厅；饭后地铁4号线回酒店。",
-          "coords": [
-            30.553,
-            114.332
-          ]
-        }
-      ],
-      "anchors": [
-        "wh-hubei-museum",
-        "wh-donghu-boat",
-        "wh-lingbomen"
-      ],
-      "routeStops": [
-        {
-          "poiId": "wh-hotel-east-lake",
-          "order": 0,
-          "time": "09:30",
-          "role": "住宿"
-        },
-        {
-          "poiId": "wh-liangdao-street",
-          "order": 1,
-          "time": "11:00",
-          "role": "过早/午餐"
-        },
-        {
-          "poiId": "wh-hubei-museum",
-          "order": 2,
-          "time": "13:00",
-          "role": "博物馆"
-        },
-        {
-          "poiId": "wh-donghu-boat",
-          "order": 3,
-          "time": "16:30",
-          "role": "划船"
-        },
-        {
-          "poiId": "wh-lingbomen",
-          "order": 4,
-          "time": "17:30",
-          "role": "日落"
-        },
-        {
-          "poiId": "wh-feifei-shrimp-chuhe",
-          "order": 5,
-          "time": "19:00",
-          "role": "吃饭"
-        }
-      ],
-      "transitSegments": [
-        {
-          "fromPoiId": "wh-hotel-east-lake",
-          "toPoiId": "wh-liangdao-street",
-          "mode": "打车",
-          "minutes": 10,
-          "label": "酒店到粮道街约3公里，打车10分钟。"
-        },
-        {
-          "fromPoiId": "wh-liangdao-street",
-          "toPoiId": "wh-hubei-museum",
-          "mode": "打车",
-          "minutes": 15,
-          "label": "粮道街到省博南门约4公里，打车15分钟。"
-        },
-        {
-          "fromPoiId": "wh-hubei-museum",
-          "toPoiId": "wh-donghu-boat",
-          "mode": "打车",
-          "minutes": 10,
-          "label": "省博北门到楚风园码头约3公里，打车10分钟。"
-        },
-        {
-          "fromPoiId": "wh-donghu-boat",
-          "toPoiId": "wh-lingbomen",
-          "mode": "打车/骑行",
-          "minutes": 15,
-          "label": "磨山或听涛到凌波门约5公里，打车或绿道骑行15分钟。"
-        },
-        {
-          "fromPoiId": "wh-lingbomen",
-          "toPoiId": "wh-feifei-shrimp-chuhe",
-          "mode": "打车",
-          "minutes": 15,
-          "label": "凌波门到楚河汉街约5公里，打车15分钟。"
-        }
-      ],
-      "candidates": [
-        "wh-donghu-kayak",
-        "wh-east-lake-tingtao",
-        "wh-wuhan-university",
-        "wh-east-lake-eye",
-        "wh-hubei-art-museum",
-        "wh-baotong-temple"
       ]
     },
     {
@@ -3868,7 +3868,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "routeStops": [
         {
-          "poiId": "wh-hotel-east-lake",
+          "poiId": "wh-hotel-bairuijing",
           "order": 0,
           "time": "07:00",
           "role": "住宿"
@@ -3882,7 +3882,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       ],
       "transitSegments": [
         {
-          "fromPoiId": "wh-hotel-east-lake",
+          "fromPoiId": "wh-hotel-bairuijing",
           "toPoiId": "wh-tianhe-airport",
           "mode": "地铁2号线",
           "minutes": 55,
@@ -3981,9 +3981,46 @@ svg.leaflet-image-layer.leaflet-interactive path {
     "d1003": [
       {
         "mode": "transit",
+        "distance": "约6公里",
+        "duration": "约15-20分钟",
+        "summary": "百瑞景到粮道街",
+        "detail": "打车15-20分钟；10/3不赶早。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约4公里",
+        "duration": "约15分钟",
+        "summary": "粮道街到省博",
+        "detail": "打车到省博南门，南门进北门出。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约3公里",
+        "duration": "约10分钟",
+        "summary": "省博到楚风园码头",
+        "detail": "省博北门打车或步行到东湖听涛/楚风园。"
+      },
+      {
+        "mode": "boat",
+        "distance": "湖面航线",
+        "duration": "约30-60分钟",
+        "summary": "东湖游船",
+        "detail": "楚风园—磨山单程约40元、往返约70元；也可改皮划艇/桨板。"
+      },
+      {
+        "mode": "transit",
         "distance": "约5公里",
         "duration": "约15分钟",
-        "summary": "东湖酒店到武昌站",
+        "summary": "东湖到凌波门/汉街",
+        "detail": "看日落后打车回楚河汉街吃晚餐。"
+      }
+    ],
+    "d1004": [
+      {
+        "mode": "transit",
+        "distance": "约2.5公里",
+        "duration": "约10分钟",
+        "summary": "百瑞景到武昌站",
         "detail": "04:30出发，04:50前到站；D56 05:12发车。"
       },
       {
@@ -4036,43 +4073,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "detail": "太平溪港或茅坪港登船，体验约113米垂直升降。"
       }
     ],
-    "d1004": [
-      {
-        "mode": "transit",
-        "distance": "约3公里",
-        "duration": "约10分钟",
-        "summary": "酒店到粮道街",
-        "detail": "打车10分钟；早午餐不赶时间。"
-      },
-      {
-        "mode": "transit",
-        "distance": "约4公里",
-        "duration": "约15分钟",
-        "summary": "粮道街到省博",
-        "detail": "打车到省博南门，南门进北门出。"
-      },
-      {
-        "mode": "transit",
-        "distance": "约3公里",
-        "duration": "约10分钟",
-        "summary": "省博到楚风园码头",
-        "detail": "省博北门打车或步行到东湖听涛/楚风园。"
-      },
-      {
-        "mode": "boat",
-        "distance": "湖面航线",
-        "duration": "约30-60分钟",
-        "summary": "东湖游船",
-        "detail": "楚风园—磨山单程约40元、往返约70元；也可改皮划艇/桨板。"
-      },
-      {
-        "mode": "transit",
-        "distance": "约5公里",
-        "duration": "约15分钟",
-        "summary": "东湖到凌波门/汉街",
-        "detail": "看日落后打车回楚河汉街吃晚餐。"
-      }
-    ],
     "d1005": [
       {
         "mode": "metro",
@@ -4085,69 +4085,65 @@ svg.leaflet-image-layer.leaflet-interactive path {
   },
   "pois": [
     {
-      "id": "wh-hotel-east-lake",
-      "name": "武汉住宿片区 · 洪山广场/楚河汉街",
-      "name_zh": "武汉住宿片区 · 洪山广场/楚河汉街",
+      "id": "wh-hotel-bairuijing",
+      "name": "武汉住宿 · 百瑞景中央生活区六期（武昌丁字桥）",
+      "name_zh": "武汉住宿 · 百瑞景中央生活区六期（武昌丁字桥）",
       "city": "武汉",
-      "area": "洪山广场 / 楚河汉街",
+      "area": "武昌区丁字桥 / 宝通寺路",
       "category": "hotel",
       "coords": [
-        30.5455,
-        114.3376
+        30.5318,
+        114.3385
       ],
-      "note": "东湖西岸住宿带，兼顾省博、东湖、武昌站与天河机场。",
-      "contentTier": "standard",
-      "whyWorthIt": "洪山广场与楚河汉街之间是武汉东湖西岸的住宿带，地铁2号线直达天河机场，地铁4号线到武昌站，出租车到省博、东湖听涛与黄鹤楼均在15分钟内。",
+      "note": "武昌区百瑞景中央生活区六期（宝通寺路30号/瑞景路），社区级定位；具体楼栋/房间不公开。",
+      "contentTier": "deep",
+      "whyWorthIt": "百瑞景中央生活区六期在武昌区宝通寺路/丁字桥一带，步行可达地铁2号线宝通寺站，往武昌站约2-3公里、往天河机场可2号线直达，去黄鹤楼、粮道街、省博与东湖西岸也都在15-25分钟车程内。",
       "detailSections": [
         {
           "title": "为什么住这里",
           "items": [
-            "地铁2号线贯通汉口站、江汉路、洪山广场、街道口与武汉东站",
-            "洪山广场到武昌站乘4号线约10-15分钟，适合10/3清晨去宜昌"
+            "地铁2号线宝通寺站直达江汉路、洪山广场、街道口与天河机场",
+            "到武昌站约2-3公里，10/4清晨去宜昌的早班车打车约10分钟"
           ]
         },
         {
-          "title": "选房标准",
+          "title": "到各处怎么走",
           "items": [
-            "优先选择洪山广场站、中南路站或楚河汉街站步行500米内的酒店",
-            "确认空调、隔音、行李寄存和夜间打车回程；国庆房价以订房页为准"
+            "黄鹤楼/粮道街/昙华林：打车约15-20分钟",
+            "省博/东湖听涛/楚风园：打车约15-20分钟",
+            "汉口江汉路：地铁2号线约25分钟",
+            "天河机场：地铁2号线约55-65分钟"
+          ]
+        },
+        {
+          "title": "入住注意",
+          "items": [
+            "具体楼栋、单元与房间号只保存在本地私人记录，不发布到公开地图",
+            "出发前确认门禁、电梯、行李寄存、夜间打车与退房时间"
           ]
         }
       ],
-      "plan": "作为10/1、10/2、10/4的武汉基地；10/3去宜昌当天可寄存大件行李。",
-      "tip": "街道口/广埠屯更近武大、凌波门；洪山广场/楚河汉街更近省博、东湖听涛和武昌站。",
-      "source": "武汉住宿片区判断 + 武汉地铁2号线",
+      "plan": "10/1-10/4四晚住宿基地；10/4宜昌日04:30打车去武昌站约10分钟；10/5去天河机场从宝通寺站乘2号线直达，约55-65分钟。",
+      "tip": "公开地图只标社区级位置；具体楼栋/房间号不发布。国庆期间提前确认门禁、入住方式与行李寄存。",
+      "source": "高德/房产资料：百瑞景中央生活区六期",
       "evidenceSources": [
         {
-          "title": "武汉住宿片区：洪山广场/楚河汉街/街道口",
-          "url": "https://www.trip.com/hotels/list?city=477\u0026checkin=2026-10-01\u0026checkout=2026-10-05",
-          "type": "booking-platform",
+          "title": "高德/房产资料：百瑞景中央生活区六期（武昌丁字桥）",
+          "url": "https://uri.amap.com/search?keyword=%E7%99%BE%E7%91%9E%E6%99%AF%E4%B8%AD%E5%A4%AE%E7%94%9F%E6%B4%BB%E5%8C%BA%E5%85%AD%E6%9C%9F\u0026city=%E6%AD%A6%E6%B1%89",
+          "type": "map",
           "role": "plan",
           "language": "zh",
           "supports": [
-            "hotel-area",
+            "hotel-location",
             "transport"
           ],
-          "checkedAt": "2026-09-12",
-          "status": "confirmed"
-        },
-        {
-          "title": "武汉地铁：2号线连接天河机场与市区",
-          "url": "https://www.whrt.gov.cn/",
-          "type": "official",
-          "role": "fact",
-          "language": "zh",
-          "supports": [
-            "metro",
-            "airport-transfer"
-          ],
-          "checkedAt": "2026-09-12",
-          "status": "confirmed"
+          "checkedAt": "2026-09-19",
+          "status": "needs-recheck"
         }
       ],
-      "mapUrl": "https://uri.amap.com/search?keyword=%E6%AD%A6%E6%B1%89%E4%BD%8F%E5%AE%BF%E7%89%87%E5%8C%BA%20%C2%B7%20%E6%B4%AA%E5%B1%B1%E5%B9%BF%E5%9C%BA/%E6%A5%9A%E6%B2%B3%E6%B1%89%E8%A1%97\u0026city=%E6%AD%A6%E6%B1%89",
-      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E6%AD%A6%E6%B1%89%E4%BD%8F%E5%AE%BF%E7%89%87%E5%8C%BA%20%C2%B7%20%E6%B4%AA%E5%B1%B1%E5%B9%BF%E5%9C%BA/%E6%A5%9A%E6%B2%B3%E6%B1%89%E8%A1%97%20%E6%AD%A6%E6%B1%89",
-      "imageQuery": "武汉住宿片区 · 洪山广场/楚河汉街 武汉",
+      "mapUrl": "https://uri.amap.com/search?keyword=%E6%AD%A6%E6%B1%89%E4%BD%8F%E5%AE%BF%20%C2%B7%20%E7%99%BE%E7%91%9E%E6%99%AF%E4%B8%AD%E5%A4%AE%E7%94%9F%E6%B4%BB%E5%8C%BA%E5%85%AD%E6%9C%9F%EF%BC%88%E6%AD%A6%E6%98%8C%E4%B8%81%E5%AD%97%E6%A1%A5%EF%BC%89\u0026city=%E6%AD%A6%E6%B1%89",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E6%AD%A6%E6%B1%89%E4%BD%8F%E5%AE%BF%20%C2%B7%20%E7%99%BE%E7%91%9E%E6%99%AF%E4%B8%AD%E5%A4%AE%E7%94%9F%E6%B4%BB%E5%8C%BA%E5%85%AD%E6%9C%9F%EF%BC%88%E6%AD%A6%E6%98%8C%E4%B8%81%E5%AD%97%E6%A1%A5%EF%BC%89%20%E6%AD%A6%E6%B1%89",
+      "imageQuery": "武汉住宿 · 百瑞景中央生活区六期（武昌丁字桥） 武汉",
       "lodgingRole": "base"
     },
     {
@@ -5376,8 +5372,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "source": "携程车次页",
       "evidenceSources": [
         {
-          "title": "携程：武汉→宜昌 2026-10-03 车次与参考票价",
-          "url": "https://trains.ctrip.com/TrainBooking/Search.aspx?from=%E6%AD%A6%E6%B1%89\u0026to=%E5%AE%9C%E6%98%8C\u0026day=2026-10-03",
+          "title": "携程：武汉→宜昌 2026-10-04 车次与参考票价",
+          "url": "https://trains.ctrip.com/TrainBooking/Search.aspx?from=%E6%AD%A6%E6%B1%89\u0026to=%E5%AE%9C%E6%98%8C\u0026day=2026-10-04",
           "type": "booking-platform",
           "role": "fact",
           "language": "zh",
@@ -5385,12 +5381,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
             "train-schedule",
             "price"
           ],
-          "checkedAt": "2026-09-12",
+          "checkedAt": "2026-09-19",
           "status": "confirmed"
         },
         {
-          "title": "携程：宜昌→武汉 2026-10-03 晚间车次与参考票价",
-          "url": "https://trains.ctrip.com/TrainBooking/Search.aspx?from=%E5%AE%9C%E6%98%8C\u0026to=%E6%AD%A6%E6%B1%89\u0026day=2026-10-03",
+          "title": "携程：宜昌→武汉 2026-10-04 晚间车次与参考票价",
+          "url": "https://trains.ctrip.com/TrainBooking/Search.aspx?from=%E5%AE%9C%E6%98%8C\u0026to=%E6%AD%A6%E6%B1%89\u0026day=2026-10-04",
           "type": "booking-platform",
           "role": "fact",
           "language": "zh",
@@ -5398,7 +5394,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
             "train-schedule",
             "price"
           ],
-          "checkedAt": "2026-09-12",
+          "checkedAt": "2026-09-19",
           "status": "confirmed"
         }
       ],
@@ -6828,7 +6824,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   ],
   "defaultAssignments": [
     {
-      "poiId": "wh-hotel-east-lake",
+      "poiId": "wh-hotel-bairuijing",
       "dayId": "d1001",
       "order": 0
     },
@@ -6843,7 +6839,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "order": 2
     },
     {
-      "poiId": "wh-hotel-east-lake",
+      "poiId": "wh-hotel-bairuijing",
       "dayId": "d1002",
       "order": 0
     },
@@ -6888,82 +6884,82 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "order": 8
     },
     {
-      "poiId": "wh-hotel-east-lake",
-      "dayId": "d1003",
+      "poiId": "wh-hotel-bairuijing",
+      "dayId": "d1004",
       "order": 0
     },
     {
       "poiId": "wh-wuchang-station",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 1
     },
     {
       "poiId": "yc-yichang-east-station",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 2
     },
     {
       "poiId": "yc-three-gorges-tourist-center",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 3
     },
     {
       "poiId": "yc-premium-tour",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 4
     },
     {
       "poiId": "yc-gezhouba-ship-lock",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 5
     },
     {
       "poiId": "yc-xiling-gorge",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 6
     },
     {
       "poiId": "yc-three-gorges-dam",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 7
     },
     {
       "poiId": "yc-ship-lift",
-      "dayId": "d1003",
+      "dayId": "d1004",
       "order": 8
     },
     {
-      "poiId": "wh-hotel-east-lake",
-      "dayId": "d1004",
+      "poiId": "wh-hotel-bairuijing",
+      "dayId": "d1003",
       "order": 0
     },
     {
       "poiId": "wh-liangdao-street",
-      "dayId": "d1004",
+      "dayId": "d1003",
       "order": 1
     },
     {
       "poiId": "wh-hubei-museum",
-      "dayId": "d1004",
+      "dayId": "d1003",
       "order": 2
     },
     {
       "poiId": "wh-donghu-boat",
-      "dayId": "d1004",
+      "dayId": "d1003",
       "order": 3
     },
     {
       "poiId": "wh-lingbomen",
-      "dayId": "d1004",
+      "dayId": "d1003",
       "order": 4
     },
     {
       "poiId": "wh-feifei-shrimp-chuhe",
-      "dayId": "d1004",
+      "dayId": "d1003",
       "order": 5
     },
     {
-      "poiId": "wh-hotel-east-lake",
+      "poiId": "wh-hotel-bairuijing",
       "dayId": "d1005",
       "order": 0
     },
