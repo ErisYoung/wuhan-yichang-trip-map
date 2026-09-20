@@ -2363,6 +2363,67 @@ svg.leaflet-image-layer.leaflet-interactive path {
       display: none;
     }
 
+.desktop-actions {
+      position: sticky;
+      bottom: 0;
+      z-index: 40;
+      margin-top: auto;
+      border-top: 1px solid var(--line);
+      background: rgba(247, 249, 250, 0.96);
+      backdrop-filter: blur(8px);
+    }
+
+    .desktop-actions-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      padding: 10px 14px 12px;
+    }
+
+    .desktop-actions-buttons button {
+      padding: 8px 6px;
+      font-size: 12px;
+    }
+
+    .desktop-actions-buttons button:disabled {
+      color: #929ba3;
+      opacity: 0.65;
+      cursor: default;
+    }
+
+    .desktop-change-summary {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      max-height: 38vh;
+      overflow: auto;
+    }
+
+    .desktop-change-summary h2 {
+      margin: 0 0 6px;
+      font-size: 14px;
+    }
+
+    .desktop-change-summary p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .desktop-change-summary ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .desktop-change-summary textarea {
+      width: 100%;
+      min-height: 96px;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+
     .mobile-bottom-sheet,
     .mobile-sheet-view {
       display: contents;
@@ -2414,6 +2475,10 @@ svg.leaflet-image-layer.leaflet-interactive path {
     }
 
     @media (max-width: 820px) {
+      .desktop-actions {
+        display: none;
+      }
+
       :root {
         --mobile-app-bar-height: 64px;
         --mobile-sheet-compact-height: 43dvh;
@@ -3016,6 +3081,19 @@ svg.leaflet-image-layer.leaflet-interactive path {
           </div>
         </div>
       </section>
+      <div class="desktop-actions" id="desktop-actions" aria-label="行程修改工具">
+        <section class="desktop-change-summary" id="desktop-change-summary" hidden>
+          <h2>修改汇总</h2>
+          <p id="desktop-change-summary-meta">还没有修改行程。</p>
+          <ul id="desktop-change-summary-list"></ul>
+          <textarea id="desktop-replan-fallback" aria-label="可手动复制的完整重新安排请求" readonly hidden></textarea>
+        </section>
+        <div class="desktop-actions-buttons">
+          <button type="button" data-mirror-action="undo" disabled>撤销上一步</button>
+          <button type="button" data-mirror-action="summary" aria-expanded="false">修改汇总</button>
+          <button type="button" data-mirror-action="replan">请 Codex 重新安排</button>
+        </div>
+      </div>
     </aside>
       </div>
       <div class="mobile-sheet-footer" aria-label="行程修改工具">
@@ -11367,6 +11445,63 @@ svg.leaflet-image-layer.leaflet-interactive path {
       }
       renderMobileShell();
     });
+  </script>
+  <script>
+    (() => {
+      const bar = document.getElementById("desktop-actions");
+      if (!bar) return;
+      const pairs = [
+        { desktop: bar.querySelector('[data-mirror-action="undo"]'), source: document.getElementById("mobile-undo-action") },
+        { desktop: bar.querySelector('[data-mirror-action="summary"]'), source: document.getElementById("mobile-change-summary-action") },
+        { desktop: bar.querySelector('[data-mirror-action="replan"]'), source: document.getElementById("mobile-replan-action") }
+      ].filter((pair) => pair.desktop && pair.source);
+
+      const desktopSummary = document.getElementById("desktop-change-summary");
+      const desktopMeta = document.getElementById("desktop-change-summary-meta");
+      const desktopList = document.getElementById("desktop-change-summary-list");
+      const desktopFallback = document.getElementById("desktop-replan-fallback");
+      const mobileSummary = document.getElementById("mobile-change-summary");
+      const mobileMeta = document.getElementById("mobile-change-summary-meta");
+      const mobileList = document.getElementById("mobile-change-summary-list");
+      const mobileFallback = document.getElementById("mobile-replan-fallback");
+      let syncing = false;
+
+      const sync = () => {
+        if (syncing) return;
+        syncing = true;
+        pairs.forEach(({ desktop, source }) => {
+          if (desktop.textContent !== source.textContent) desktop.textContent = source.textContent;
+          if (desktop.disabled !== source.disabled) desktop.disabled = source.disabled;
+          const expanded = source.getAttribute("aria-expanded");
+          if (expanded != null && desktop.getAttribute("aria-expanded") !== expanded) {
+            desktop.setAttribute("aria-expanded", expanded);
+          }
+        });
+        if (desktopSummary && mobileSummary) {
+          if (desktopMeta && mobileMeta && desktopMeta.textContent !== mobileMeta.textContent) desktopMeta.textContent = mobileMeta.textContent;
+          if (desktopList && mobileList && desktopList.innerHTML !== mobileList.innerHTML) desktopList.innerHTML = mobileList.innerHTML;
+          if (desktopSummary.hidden !== mobileSummary.hidden) desktopSummary.hidden = mobileSummary.hidden;
+        }
+        if (desktopFallback && mobileFallback) {
+          if (desktopFallback.value !== mobileFallback.value) desktopFallback.value = mobileFallback.value;
+          if (desktopFallback.hidden !== mobileFallback.hidden) desktopFallback.hidden = mobileFallback.hidden;
+        }
+        syncing = false;
+      };
+
+      pairs.forEach(({ desktop, source }) => {
+        desktop.addEventListener("click", () => source.click());
+      });
+
+      new MutationObserver(sync).observe(document.body, {
+        subtree: true,
+        childList: true,
+        characterData: true,
+        attributes: true,
+        attributeFilter: ["aria-expanded", "disabled", "hidden"]
+      });
+      sync();
+    })();
   </script>
 </body>
 </html>
