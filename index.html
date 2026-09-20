@@ -2943,11 +2943,11 @@ svg.leaflet-image-layer.leaflet-interactive path {
       <div class="sidebar-panel" id="itinerary-panel">
       <div class="trip-overview-heading">
       <h1>武汉 + 宜昌 5 天 4 晚 · 江城过早与两坝一峡地图</h1>
-      <p class="subtitle">东湖划船、省博、长江大桥与轮渡，外加宜昌两坝一峡与升船机；住宿和交通均为公开规划级信息。</p>
+      <p class="subtitle">东湖划船、省博、长江大桥与轮渡，外加宜昌两坝一峡与升船机；襄阳与荆州为 10/4 未抢到票时的备选日（10/6、10/7），住宿和交通均为公开规划级信息。</p>
 <p class="subtitle" style="margin-top:8px"><a href="reservations.html" style="color:var(--rail);font-weight:700;text-decoration:none">📋 预约与预订清单</a></p>
 
       <div class="summary" aria-label="行程摘要">
-        <div class="metric"><strong>5</strong><span>自然日</span></div>
+        <div class="metric"><strong>7</strong><span>自然日</span></div>
         <div class="metric"><strong>1</strong><span>住宿核心</span></div>
         <div class="metric"><strong>0</strong><span>同期活动</span></div>
         <div class="metric"><strong id="poi-count">0</strong><span>吃喝玩 POI</span></div>
@@ -2960,6 +2960,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <button type="button" data-zoom-city="All">全程</button>
           <button type="button" data-zoom-city="武汉">武汉</button>
           <button type="button" data-zoom-city="宜昌">宜昌</button>
+          <button type="button" data-zoom-city="襄阳">襄阳</button>
+          <button type="button" data-zoom-city="荆州">荆州</button>
         </div>
         <label class="candidate-toggle">
           <input type="checkbox" id="show-candidates-toggle">
@@ -3077,6 +3079,30 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "coords": [
         30.6919,
         111.2865
+      ],
+      "kind": "city"
+    },
+    {
+      "id": "xiangyang",
+      "order": 3,
+      "name": "襄阳",
+      "date": "10/06",
+      "note": "备选日：襄阳古城、昭明台·北街与古隆中一天往返；需先解决 10/4 宜昌票或把返程往后挪。",
+      "coords": [
+        32.009,
+        112.122
+      ],
+      "kind": "city"
+    },
+    {
+      "id": "jingzhou",
+      "order": 4,
+      "name": "荆州",
+      "date": "10/07",
+      "note": "备选日：荆州博物馆、关帝庙与古城·宾阳楼一天往返；可与 10/4 宜昌行程互换。",
+      "coords": [
+        30.335,
+        112.19
       ],
       "kind": "city"
     }
@@ -3887,6 +3913,301 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "wh-wuchang-station",
         "wh-hankou-station"
       ]
+    },
+    {
+      "id": "d1006",
+      "short": "10/06",
+      "date": "10/06 周二",
+      "city": "襄阳",
+      "title": "备选：襄阳古城与古隆中一日",
+      "summary": "备选日（10/4 宜昌票未定或行程延长时启用）：汉口站早班高铁到襄阳东，上午逛襄阳古城·昭明台·北街，下午古隆中，19:00 前后返汉口，22:00 回百瑞景。",
+      "color": "#4F7A7A",
+      "travel": true,
+      "events": [
+        {
+          "time": "06:00",
+          "title": "酒店出发 · 百瑞景中央生活区六期",
+          "note": "打车或地铁2号线到汉口站，乘汉十高铁约1小时30分到襄阳东；10/6 车票9/22开售，带身份证与充电宝。",
+          "coords": [
+            30.5318,
+            114.3385
+          ],
+          "routeBreakBefore": true
+        },
+        {
+          "time": "09:00",
+          "title": "襄阳东站",
+          "note": "出站打车20–30分钟进古城；先把返程车次确认好。",
+          "coords": [
+            32.0164,
+            112.2904
+          ]
+        },
+        {
+          "time": "10:00",
+          "title": "襄阳古城 · 昭明台 / 北街",
+          "note": "昭明台→北街→古城墙（夫人城、临汉门）一线步行，北街吃襄阳牛肉面当午餐。",
+          "coords": [
+            32.0203,
+            112.1452
+          ]
+        },
+        {
+          "time": "14:00",
+          "title": "古隆中（隆中景区）",
+          "note": "石牌坊→草庐亭→三顾堂→武侯祠→抱膝亭，约2–3小时；旺季16:30停止入园。",
+          "coords": [
+            31.9967,
+            112.0204
+          ]
+        },
+        {
+          "time": "18:30",
+          "title": "襄阳东站（返程）",
+          "note": "回站预留50分钟；优先19:00之后车次。",
+          "coords": [
+            32.0164,
+            112.2904
+          ]
+        },
+        {
+          "time": "21:00",
+          "title": "汉口站（到达）",
+          "note": "出站换地铁2号线回宝通寺/百瑞景。",
+          "coords": [
+            30.6185,
+            114.2555
+          ]
+        },
+        {
+          "time": "22:00",
+          "title": "回到百瑞景（住宿）",
+          "note": "洗漱休息；10/7 荆州日同样要早起。",
+          "coords": [
+            30.5318,
+            114.3385
+          ]
+        }
+      ],
+      "anchors": [
+        "xy-gucheng",
+        "xy-gulongzhong"
+      ],
+      "candidates": [
+        "xy-tangcheng"
+      ],
+      "routeStops": [
+        {
+          "poiId": "wh-hotel-bairuijing",
+          "order": 0,
+          "time": "06:00",
+          "role": "住宿"
+        },
+        {
+          "poiId": "xy-east-station",
+          "order": 1,
+          "time": "09:00",
+          "role": "交通"
+        },
+        {
+          "poiId": "xy-gucheng",
+          "order": 2,
+          "time": "10:00",
+          "role": "古城"
+        },
+        {
+          "poiId": "xy-gulongzhong",
+          "order": 3,
+          "time": "14:00",
+          "role": "三国"
+        }
+      ],
+      "transitSegments": [
+        {
+          "fromPoiId": "wh-hotel-bairuijing",
+          "toPoiId": "xy-east-station",
+          "mode": "地铁+高铁",
+          "minutes": 125,
+          "label": "百瑞景打车/地铁2号线到汉口站约30分钟，再乘汉十高铁约1小时30分到襄阳东；10/6 车票9/22开售。"
+        },
+        {
+          "fromPoiId": "xy-east-station",
+          "toPoiId": "xy-gucheng",
+          "mode": "打车",
+          "minutes": 25,
+          "label": "襄阳东站到襄阳古城约18公里，打车20-30分钟。"
+        },
+        {
+          "fromPoiId": "xy-gucheng",
+          "toPoiId": "xy-gulongzhong",
+          "mode": "打车",
+          "minutes": 30,
+          "label": "古城到古隆中约14公里，打车约30分钟；16:30停止入园。"
+        }
+      ]
+    },
+    {
+      "id": "d1007",
+      "short": "10/07",
+      "date": "10/07 周三",
+      "city": "荆州",
+      "title": "备选：荆州古城与博物馆一日",
+      "summary": "备选日（可与 10/4 宜昌行程互换）：汉口站早班动车到荆州，上午荆州博物馆，午后关帝庙与宾阳楼·古城墙，傍晚张居正故居，19:00 前后返汉口。",
+      "color": "#8A6A4F",
+      "travel": true,
+      "events": [
+        {
+          "time": "06:30",
+          "title": "酒店出发 · 百瑞景中央生活区六期",
+          "note": "打车或地铁2号线到汉口站，乘动车约1小时30分到荆州；10/7 车票9/23开售，带身份证。",
+          "coords": [
+            30.5318,
+            114.3385
+          ],
+          "routeBreakBefore": true
+        },
+        {
+          "time": "09:00",
+          "title": "荆州站",
+          "note": "出站打车约15分钟到古城；先确认返程车次。",
+          "coords": [
+            30.3749,
+            112.206
+          ]
+        },
+        {
+          "time": "10:00",
+          "title": "荆州博物馆",
+          "note": "免费，09:00–17:00（16:00停止入馆）；先看西汉古尸与楚汉漆器，约2小时。",
+          "coords": [
+            30.3556,
+            112.1745
+          ]
+        },
+        {
+          "time": "13:30",
+          "title": "荆州关帝庙",
+          "note": "关羽府邸旧址，约30–40分钟；门票约 ¥20。",
+          "coords": [
+            30.3519,
+            112.1921
+          ]
+        },
+        {
+          "time": "15:00",
+          "title": "荆州古城 · 宾阳楼",
+          "note": "东门上城墙沿内环路走一段，约1小时；常见联票含关帝庙与张居正故居。",
+          "coords": [
+            30.3503,
+            112.2104
+          ]
+        },
+        {
+          "time": "16:30",
+          "title": "张居正故居",
+          "note": "就在宾阳楼东门内，30–40分钟；17:30前离开去车站。",
+          "coords": [
+            30.3494,
+            112.2096
+          ]
+        },
+        {
+          "time": "18:00",
+          "title": "荆州站（返程）",
+          "note": "回站预留40分钟；优先19:00之后车次。",
+          "coords": [
+            30.3749,
+            112.206
+          ]
+        },
+        {
+          "time": "19:30",
+          "title": "汉口站（到达）",
+          "note": "换地铁2号线回宝通寺/百瑞景。",
+          "coords": [
+            30.6185,
+            114.2555
+          ]
+        },
+        {
+          "time": "20:30",
+          "title": "回到百瑞景（住宿）",
+          "note": "整理行李；按实际返程安排下一段行程。",
+          "coords": [
+            30.5318,
+            114.3385
+          ]
+        }
+      ],
+      "anchors": [
+        "jz-gucheng",
+        "jz-museum"
+      ],
+      "candidates": [
+        "jz-zhangjuzheng"
+      ],
+      "routeStops": [
+        {
+          "poiId": "wh-hotel-bairuijing",
+          "order": 0,
+          "time": "06:30",
+          "role": "住宿"
+        },
+        {
+          "poiId": "jz-station",
+          "order": 1,
+          "time": "09:00",
+          "role": "交通"
+        },
+        {
+          "poiId": "jz-museum",
+          "order": 2,
+          "time": "10:00",
+          "role": "博物馆"
+        },
+        {
+          "poiId": "jz-guandimiao",
+          "order": 3,
+          "time": "13:30",
+          "role": "古迹"
+        },
+        {
+          "poiId": "jz-gucheng",
+          "order": 4,
+          "time": "15:00",
+          "role": "古城"
+        }
+      ],
+      "transitSegments": [
+        {
+          "fromPoiId": "wh-hotel-bairuijing",
+          "toPoiId": "jz-station",
+          "mode": "地铁+动车",
+          "minutes": 120,
+          "label": "百瑞景打车/地铁2号线到汉口站约30分钟，再乘汉宜动车约1小时30分到荆州；10/7 车票9/23开售。"
+        },
+        {
+          "fromPoiId": "jz-station",
+          "toPoiId": "jz-museum",
+          "mode": "打车",
+          "minutes": 15,
+          "label": "荆州站到博物馆约6公里，打车约15分钟；16:00停止入馆。"
+        },
+        {
+          "fromPoiId": "jz-museum",
+          "toPoiId": "jz-guandimiao",
+          "mode": "步行/打车",
+          "minutes": 10,
+          "label": "博物馆到关帝庙约2公里，打车10分钟或沿内环路步行25分钟。"
+        },
+        {
+          "fromPoiId": "jz-guandimiao",
+          "toPoiId": "jz-gucheng",
+          "mode": "步行/打车",
+          "minutes": 15,
+          "label": "关帝庙到东门宾阳楼约2公里，打车10分钟或步行20-25分钟。"
+        }
+      ]
     }
   ],
   "transitSegmentsByDay": {
@@ -4066,6 +4387,108 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "duration": "约55-65分钟",
         "summary": "百瑞景（宝通寺）到天河机场",
         "detail": "2号线直达；07:50-08:00出发，09:15前到，11:24左右起飞。"
+      }
+    ],
+    "d1006": [
+      {
+        "mode": "rail",
+        "distance": "约330公里",
+        "duration": "约2小时",
+        "summary": "百瑞景经汉口站到襄阳东",
+        "detail": "先到汉口站约30分钟，再乘汉十高铁约1小时30分；二等座约 ¥110–140，10/6 车票9/22开售。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约18公里",
+        "duration": "约25分钟",
+        "summary": "襄阳东站到襄阳古城",
+        "detail": "出站打车20–30分钟；也可坐公交进古城。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约14公里",
+        "duration": "约30分钟",
+        "summary": "襄阳古城到古隆中",
+        "detail": "打车约30分钟；16:30停止入园、17:30闭园。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约20公里",
+        "duration": "约40分钟",
+        "summary": "古隆中回襄阳东站",
+        "detail": "打车约30–40分钟；预留50分钟赶19:00后返汉车次。"
+      },
+      {
+        "mode": "rail",
+        "distance": "约330公里",
+        "duration": "约1小时30分",
+        "summary": "襄阳东到汉口站",
+        "detail": "19:00后车次返汉口，二等座约 ¥110–140。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约8公里",
+        "duration": "约30分钟",
+        "summary": "汉口站回百瑞景",
+        "detail": "地铁2号线回宝通寺，约22:00回到住地。"
+      }
+    ],
+    "d1007": [
+      {
+        "mode": "rail",
+        "distance": "约200公里",
+        "duration": "约2小时",
+        "summary": "百瑞景经汉口站到荆州站",
+        "detail": "先到汉口站约30分钟，再乘汉宜动车约1小时30分；二等座约 ¥60 上下，10/7 车票9/23开售。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约6公里",
+        "duration": "约15分钟",
+        "summary": "荆州站到荆州博物馆",
+        "detail": "打车约15分钟；16:00停止入馆。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约2公里",
+        "duration": "约10分钟",
+        "summary": "荆州博物馆到关帝庙",
+        "detail": "打车10分钟或沿内环路步行25分钟。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约2公里",
+        "duration": "约15分钟",
+        "summary": "关帝庙到宾阳楼",
+        "detail": "步行20–25分钟或打车10分钟。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约500米",
+        "duration": "约5分钟",
+        "summary": "宾阳楼到张居正故居",
+        "detail": "都在东门内，步行5分钟；故居开到21:00（20:30停止入场）。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约6公里",
+        "duration": "约20分钟",
+        "summary": "张居正故居回荆州站",
+        "detail": "打车约15–20分钟；18:00前出发赶19:00后车次。"
+      },
+      {
+        "mode": "rail",
+        "distance": "约200公里",
+        "duration": "约1小时30分",
+        "summary": "荆州站到汉口站",
+        "detail": "19:00后车次返汉口，二等座约 ¥60 上下。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约8公里",
+        "duration": "约30分钟",
+        "summary": "汉口站回百瑞景",
+        "detail": "地铁2号线回宝通寺，约20:30回到住地。"
       }
     ]
   },
@@ -6996,6 +7419,525 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E6%86%A8%E5%93%A5%E9%B1%BC%E5%BA%84%C2%B7%E5%AE%9C%E6%98%8C%E8%82%A5%E9%B1%BC%EF%BC%88%E4%B8%9C%E7%AB%99%E5%BA%97%EF%BC%89%20%E5%AE%9C%E6%98%8C",
       "imageQuery": "憨哥鱼庄·宜昌肥鱼（东站店） 宜昌",
       "mealRole": "dinner"
+    },
+    {
+      "id": "xy-east-station",
+      "name": "襄阳东站",
+      "name_zh": "襄阳东站",
+      "city": "襄阳",
+      "area": "东津新区",
+      "category": "local-life",
+      "coords": [
+        32.0164,
+        112.2904
+      ],
+      "note": "汉十高铁襄阳东站；武汉（汉口）方向高铁约1小时30分–2小时，出站打车到襄阳古城约20–30分钟。",
+      "contentTier": "standard",
+      "whyWorthIt": "襄阳东站是武汉当天往返襄阳最省时间的进出站：从汉口站坐高铁约1.5小时到，出站打车或坐公交20–30分钟进古城；站内有便利店，适合把大件行李留在武汉、轻装一日往返。",
+      "detailSections": [
+        {
+          "title": "当天往返怎么走",
+          "items": [
+            "去程建议坐汉口站 07:00 前后的车次，09:00 前到襄阳东",
+            "返程至少提前 40 分钟回站，买 19:00 之后的车次更稳"
+          ]
+        },
+        {
+          "title": "车站设施",
+          "items": [
+            "站内有便利店与饮水点，周边餐饮少",
+            "正餐留到古城北街更划算"
+          ]
+        }
+      ],
+      "plan": "10/6 备选日的进出站：上午到、晚上回，返程车次按古隆中出园时间倒推。",
+      "tip": "车次与票价以 12306 为准；10/6 的车票 9/22 开售，节假日建议开售即抢或直接候补。",
+      "source": "12306 / 襄阳市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "中国铁路12306：火车票预售期15天",
+          "url": "https://www.12306.cn/index/",
+          "type": "official",
+          "role": "fact",
+          "language": "zh",
+          "supports": [
+            "train-tickets",
+            "presale"
+          ],
+          "checkedAt": "2026-09-12",
+          "status": "confirmed"
+        },
+        {
+          "title": "襄阳市文化和旅游局（襄阳古城·古隆中·唐城）",
+          "url": "http://wlj.xiangyang.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%A5%84%E9%98%B3%E4%B8%9C%E7%AB%99\u0026city=%E8%A5%84%E9%98%B3",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%A5%84%E9%98%B3%E4%B8%9C%E7%AB%99%20%E8%A5%84%E9%98%B3",
+      "imageQuery": "襄阳东站 襄阳"
+    },
+    {
+      "id": "xy-gucheng",
+      "name": "襄阳古城 · 昭明台 / 北街",
+      "name_zh": "襄阳古城 · 昭明台 / 北街",
+      "city": "襄阳",
+      "area": "襄城区 古城",
+      "category": "sight",
+      "coords": [
+        32.0203,
+        112.1452
+      ],
+      "note": "襄阳古城墙、昭明台、北街与夫人城连成一片：城墙与街区免费，昭明台博物馆免费（周一闭馆）。",
+      "contentTier": "standard",
+      "whyWorthIt": "襄阳古城有 2800 多年建城史，被称作“华夏第一城池”：城墙外是汉江与护城河，昭明台北侧就是北街，串起古城墙、夫人城与临汉门，全程步行强度低，历史与逛吃能一次完成。",
+      "detailSections": [
+        {
+          "title": "逛什么",
+          "items": [
+            "昭明台→北街→古城墙（夫人城、临汉门）一线约 1.5–2 小时",
+            "北街小吃集中，襄阳牛肉面与黄酒馆可当午餐"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "从襄阳东站打车约 20–30 分钟到昭明台附近",
+            "下午要去古隆中，13:30 前后从古城出发"
+          ]
+        }
+      ],
+      "plan": "10/6 上午到中午安排在古城与北街，13:30 出发去古隆中；若改去唐城，则古城时间可延长到 15:00。",
+      "tip": "昭明台博物馆周一闭馆（10/6 为周二，正常开放）；国庆人流大，上城墙台阶注意安全。",
+      "source": "襄阳市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "襄阳市文化和旅游局（襄阳古城·古隆中·唐城）",
+          "url": "http://wlj.xiangyang.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%A5%84%E9%98%B3%E5%8F%A4%E5%9F%8E%20%C2%B7%20%E6%98%AD%E6%98%8E%E5%8F%B0%20/%20%E5%8C%97%E8%A1%97\u0026city=%E8%A5%84%E9%98%B3",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%A5%84%E9%98%B3%E5%8F%A4%E5%9F%8E%20%C2%B7%20%E6%98%AD%E6%98%8E%E5%8F%B0%20/%20%E5%8C%97%E8%A1%97%20%E8%A5%84%E9%98%B3",
+      "imageQuery": "襄阳古城 · 昭明台 / 北街 襄阳"
+    },
+    {
+      "id": "xy-gulongzhong",
+      "name": "古隆中（隆中景区）",
+      "name_zh": "古隆中（隆中景区）",
+      "city": "襄阳",
+      "area": "襄城区 隆中",
+      "category": "sight",
+      "coords": [
+        31.9967,
+        112.0204
+      ],
+      "note": "诸葛亮“躬耕陇亩”之地、三顾茅庐与《隆中对》发生地；旺季 08:30–17:30、16:30 停止入园，需线上预约购票。",
+      "contentTier": "standard",
+      "whyWorthIt": "古隆中是襄阳三国线最完整的一处：石牌坊、草庐亭、三顾堂、武侯祠与抱膝亭依山而建，林荫步道多，夏天也凉快；从襄阳古城打车约 30 分钟，半日刚好走完主线，是襄阳一日游里性价比最高的一段。",
+      "detailSections": [
+        {
+          "title": "怎么逛",
+          "items": [
+            "推荐顺序：石牌坊→草庐亭→三顾堂→武侯祠→抱膝亭，约 2–3 小时",
+            "景区有观光车，腿力一般可坐车上山再走下来"
+          ]
+        },
+        {
+          "title": "买票与时间",
+          "items": [
+            "旺季 08:30–17:30，16:30 停止入园；线上预约购票更省排队",
+            "古城打车约 30 分钟；回襄阳东站预留 50 分钟"
+          ]
+        }
+      ],
+      "plan": "10/6 下午 14:00 入园，17:00 前出园回襄阳东站，赶 19:00 前后返汉车次。",
+      "tip": "门票与观光车价格以景区官方/OTA 为准；雨天石阶湿滑。更想看影视基地的话可用唐城替换（同在城南方向）。",
+      "source": "襄阳市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "襄阳市文化和旅游局（襄阳古城·古隆中·唐城）",
+          "url": "http://wlj.xiangyang.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%8F%A4%E9%9A%86%E4%B8%AD%EF%BC%88%E9%9A%86%E4%B8%AD%E6%99%AF%E5%8C%BA%EF%BC%89\u0026city=%E8%A5%84%E9%98%B3",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E5%8F%A4%E9%9A%86%E4%B8%AD%EF%BC%88%E9%9A%86%E4%B8%AD%E6%99%AF%E5%8C%BA%EF%BC%89%20%E8%A5%84%E9%98%B3",
+      "imageQuery": "古隆中（隆中景区） 襄阳"
+    },
+    {
+      "id": "xy-tangcheng",
+      "name": "襄阳唐城影视基地",
+      "name_zh": "襄阳唐城影视基地",
+      "city": "襄阳",
+      "area": "襄城区 庞公",
+      "category": "sight",
+      "coords": [
+        31.99,
+        112.1766
+      ],
+      "note": "以唐风建筑与影视拍摄为主的景区，夜场灯光演出是招牌；适合与古隆中二选一。",
+      "contentTier": "standard",
+      "whyWorthIt": "唐城是《妖猫传》等影视剧的取景地，城墙、宫殿与市井街按唐代形制复原，白天拍照、晚场灯光巡游是主要玩法；离古城约 15 分钟车程，适合想轻松半天、少爬山的安排。",
+      "detailSections": [
+        {
+          "title": "玩什么",
+          "items": [
+            "白天看唐风建筑与实景演出，约 2–3 小时",
+            "晚场灯光演出结束较晚，当晚返汉需核对末班车次"
+          ]
+        }
+      ],
+      "plan": "10/6 备选：替换古隆中，或只逛“古城 + 唐城”的轻松版。",
+      "tip": "门票与演出场次以景区公告为准，建议线上预约；夜场结束晚，别赶太紧的返程车。",
+      "source": "襄阳市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "襄阳市文化和旅游局（襄阳古城·古隆中·唐城）",
+          "url": "http://wlj.xiangyang.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%A5%84%E9%98%B3%E5%94%90%E5%9F%8E%E5%BD%B1%E8%A7%86%E5%9F%BA%E5%9C%B0\u0026city=%E8%A5%84%E9%98%B3",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%A5%84%E9%98%B3%E5%94%90%E5%9F%8E%E5%BD%B1%E8%A7%86%E5%9F%BA%E5%9C%B0%20%E8%A5%84%E9%98%B3",
+      "imageQuery": "襄阳唐城影视基地 襄阳"
+    },
+    {
+      "id": "jz-station",
+      "name": "荆州站",
+      "name_zh": "荆州站",
+      "city": "荆州",
+      "area": "荆州区 郢城镇",
+      "category": "local-life",
+      "coords": [
+        30.3749,
+        112.206
+      ],
+      "note": "汉宜铁路荆州站；汉口出发动车约 1 小时 20 分–1 小时 40 分，出站到荆州古城东门约 15 分钟车程。",
+      "contentTier": "standard",
+      "whyWorthIt": "荆州站是武汉当天往返荆州的主出入口：汉口站坐动车约 1.5 小时到，站前有公交枢纽与网约车通道，打车约 15 分钟就能到古城宾阳楼；一日往返时间可控，适合把 10/4 的宜昌行程替换掉。",
+      "detailSections": [
+        {
+          "title": "当天往返怎么走",
+          "items": [
+            "去程建议坐汉口站 07:00–07:30 的车次，09:00 前到荆州",
+            "返程买 19:00 之后车次；出站回古城接驳约 15 分钟"
+          ]
+        },
+        {
+          "title": "车站设施",
+          "items": [
+            "站内有便利店，站前有公交与网约车通道",
+            "大件行李可寄存在站内或酒店"
+          ]
+        }
+      ],
+      "plan": "10/7 备选日的进出站：上午到、晚上回，返程按古城夜景是否加钟决定。",
+      "tip": "车次与票价以 12306 为准；10/7 的车票 9/23 开售，二等座约 60 元上下。",
+      "source": "12306 / 荆州市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "中国铁路12306：火车票预售期15天",
+          "url": "https://www.12306.cn/index/",
+          "type": "official",
+          "role": "fact",
+          "language": "zh",
+          "supports": [
+            "train-tickets",
+            "presale"
+          ],
+          "checkedAt": "2026-09-12",
+          "status": "confirmed"
+        },
+        {
+          "title": "荆州市文化和旅游局（荆州古城·宾阳楼·关帝庙·张居正故居）",
+          "url": "http://wlj.jingzhou.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E7%AB%99\u0026city=%E8%8D%86%E5%B7%9E",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%8D%86%E5%B7%9E%E7%AB%99%20%E8%8D%86%E5%B7%9E",
+      "imageQuery": "荆州站 荆州"
+    },
+    {
+      "id": "jz-museum",
+      "name": "荆州博物馆",
+      "name_zh": "荆州博物馆",
+      "city": "荆州",
+      "area": "荆州区 荆州中路",
+      "category": "art",
+      "coords": [
+        30.3556,
+        112.1745
+      ],
+      "note": "免费开放 09:00–17:00（16:00 停止入馆），周一闭馆；馆藏以楚汉漆木器、丝织品与西汉古尸著称。",
+      "contentTier": "standard",
+      "whyWorthIt": "荆州博物馆是国家一级博物馆，楚国漆木器、马山战国丝织品与西汉男尸是三大看点，常设展信息密度高、游客比热门景区少；和古城墙、关帝庙串起来正好半天，是荆州一日游里最值的一段。",
+      "detailSections": [
+        {
+          "title": "看什么",
+          "items": [
+            "西汉古尸、楚汉漆器与战国丝织品是必看",
+            "预留 1.5–2 小时；人工讲解现场取号"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "从古城东门打车约 10 分钟，或沿内环路步行约 25 分钟",
+            "16:00 停止入馆，下午先去博物馆再回城墙"
+          ]
+        }
+      ],
+      "plan": "10/7 下午第一站（14:00 前入馆），之后去关帝庙与宾阳楼。",
+      "tip": "免费参观；是否需要提前预约与放票时间以官方公众号为准，周一闭馆。",
+      "source": "荆州博物馆官网",
+      "evidenceSources": [
+        {
+          "title": "荆州博物馆官网（免费开放与预约）",
+          "url": "http://www.jzmuseum.com/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "opening-hours",
+            "reservation",
+            "museum"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        },
+        {
+          "title": "荆州市文化和旅游局（荆州古城·宾阳楼·关帝庙·张居正故居）",
+          "url": "http://wlj.jingzhou.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86\u0026city=%E8%8D%86%E5%B7%9E",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%8D%86%E5%B7%9E%E5%8D%9A%E7%89%A9%E9%A6%86%20%E8%8D%86%E5%B7%9E",
+      "imageQuery": "荆州博物馆 荆州"
+    },
+    {
+      "id": "jz-guandimiao",
+      "name": "荆州关帝庙",
+      "name_zh": "荆州关帝庙",
+      "city": "荆州",
+      "area": "荆州区 古城南门",
+      "category": "sight",
+      "coords": [
+        30.3519,
+        112.1921
+      ],
+      "note": "关羽镇守荆州时的府邸旧址，与解州关帝庙、洛阳关林、当阳关陵并称关公纪念地；开放约 08:00–17:30。",
+      "contentTier": "standard",
+      "whyWorthIt": "荆州关帝庙建在关羽府邸旧址上，明清重修，仪门、正殿与三义殿沿中轴铺开；门票便宜、半小时就能看完，而且离博物馆与古城南门都近，是古城里性价比很高的一个点。",
+      "detailSections": [
+        {
+          "title": "看什么",
+          "items": [
+            "正殿关羽像、三义殿与历代碑刻",
+            "约 30–40 分钟可看完，适合与博物馆连逛"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "从博物馆步行或打车约 10 分钟到庙",
+            "之后沿内环路向东回到东门宾阳楼"
+          ]
+        }
+      ],
+      "plan": "10/7 下午第二站，逛 30–40 分钟后去宾阳楼与古城墙。",
+      "tip": "开放时间与票价（约 20 元）以景区当日公告为准；节假日可能有庙会活动。",
+      "source": "荆州市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "荆州市文化和旅游局（荆州古城·宾阳楼·关帝庙·张居正故居）",
+          "url": "http://wlj.jingzhou.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%85%B3%E5%B8%9D%E5%BA%99\u0026city=%E8%8D%86%E5%B7%9E",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%8D%86%E5%B7%9E%E5%85%B3%E5%B8%9D%E5%BA%99%20%E8%8D%86%E5%B7%9E",
+      "imageQuery": "荆州关帝庙 荆州"
+    },
+    {
+      "id": "jz-gucheng",
+      "name": "荆州古城 · 宾阳楼",
+      "name_zh": "荆州古城 · 宾阳楼",
+      "city": "荆州",
+      "area": "荆州区 古城东门",
+      "category": "sight",
+      "coords": [
+        30.3503,
+        112.2104
+      ],
+      "note": "荆州古城墙（东门宾阳楼）是国内保存最完整的古城墙之一；宾阳楼、古城墙、关帝庙与张居正故居常见联票。",
+      "contentTier": "standard",
+      "whyWorthIt": "荆州古城墙周长约 11 公里，砖城与土城并存，东门宾阳楼是看点最集中的一段：上城墙能俯瞰古城格局，下城就是张居正故居与内环路，傍晚亮灯后拍照最好，也适合一日游收尾。",
+      "detailSections": [
+        {
+          "title": "怎么逛",
+          "items": [
+            "东门宾阳楼上城墙，沿内环路走一段再下来，约 1 小时",
+            "顺路看张居正故居（东门内，开到 21:00）"
+          ]
+        },
+        {
+          "title": "买票",
+          "items": [
+            "常见联票：宾阳楼+关帝庙+张居正故居+环城服务，也可单买",
+            "环城电瓶车与画舫船约 8:00–21:00，按需加购"
+          ]
+        }
+      ],
+      "plan": "10/7 下午最后一站（15:00–17:00），之后回荆州站赶 19:00 后车次。",
+      "tip": "联票与夜游时间以景区公告为准；城墙台阶多，穿防滑鞋。",
+      "source": "荆州市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "荆州市文化和旅游局（荆州古城·宾阳楼·关帝庙·张居正故居）",
+          "url": "http://wlj.jingzhou.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E8%8D%86%E5%B7%9E%E5%8F%A4%E5%9F%8E%20%C2%B7%20%E5%AE%BE%E9%98%B3%E6%A5%BC\u0026city=%E8%8D%86%E5%B7%9E",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E8%8D%86%E5%B7%9E%E5%8F%A4%E5%9F%8E%20%C2%B7%20%E5%AE%BE%E9%98%B3%E6%A5%BC%20%E8%8D%86%E5%B7%9E",
+      "imageQuery": "荆州古城 · 宾阳楼 荆州"
+    },
+    {
+      "id": "jz-zhangjuzheng",
+      "name": "张居正故居",
+      "name_zh": "张居正故居",
+      "city": "荆州",
+      "area": "荆州区 古城东门内",
+      "category": "sight",
+      "coords": [
+        30.3494,
+        112.2096
+      ],
+      "note": "明代首辅张居正故居，位于荆州古城东门内；开放约 08:00–21:00（20:30 停止入场）。",
+      "contentTier": "standard",
+      "whyWorthIt": "张居正故居是在旧宅基址上建的纪念馆，照壁、纯忠堂与太师居布局紧凑，配合古城墙能把“明代荆州”这条线串起来；位置就在宾阳楼旁边，进门出门顺路，不需要额外绕行。",
+      "detailSections": [
+        {
+          "title": "看什么",
+          "items": [
+            "纯忠堂、太师居与张居正生平展",
+            "院子不大，30–40 分钟可看完"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "就在宾阳楼东门内，与城墙常见联票",
+            "开到 21:00，可作为傍晚最后一站"
+          ]
+        }
+      ],
+      "plan": "10/7 傍晚加站：宾阳楼下来后直接进故居，17:30 前离开回车站。",
+      "tip": "门票与开放时间以景区公告为准；若赶 19:00 车次，故居只留 30 分钟。",
+      "source": "荆州市文化和旅游局",
+      "evidenceSources": [
+        {
+          "title": "荆州市文化和旅游局（荆州古城·宾阳楼·关帝庙·张居正故居）",
+          "url": "http://wlj.jingzhou.gov.cn/",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "attraction",
+            "opening-hours",
+            "ticket",
+            "discovery"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E5%BC%A0%E5%B1%85%E6%AD%A3%E6%95%85%E5%B1%85\u0026city=%E8%8D%86%E5%B7%9E",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E5%BC%A0%E5%B1%85%E6%AD%A3%E6%95%85%E5%B1%85%20%E8%8D%86%E5%B7%9E",
+      "imageQuery": "张居正故居 荆州"
     }
   ],
   "defaultAssignments": [
@@ -7123,6 +8065,41 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "poiId": "wh-tianhe-airport",
       "dayId": "d1005",
       "order": 1
+    },
+    {
+      "poiId": "xy-east-station",
+      "dayId": "d1006",
+      "order": 1
+    },
+    {
+      "poiId": "xy-gucheng",
+      "dayId": "d1006",
+      "order": 2
+    },
+    {
+      "poiId": "xy-gulongzhong",
+      "dayId": "d1006",
+      "order": 3
+    },
+    {
+      "poiId": "jz-station",
+      "dayId": "d1007",
+      "order": 1
+    },
+    {
+      "poiId": "jz-museum",
+      "dayId": "d1007",
+      "order": 2
+    },
+    {
+      "poiId": "jz-guandimiao",
+      "dayId": "d1007",
+      "order": 3
+    },
+    {
+      "poiId": "jz-gucheng",
+      "dayId": "d1007",
+      "order": 4
     }
   ],
   "events": []
@@ -7956,7 +8933,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
     };
     const cityLabels = {
       "武汉": "武汉",
-      "宜昌": "宜昌"
+      "宜昌": "宜昌",
+      "襄阳": "襄阳",
+      "荆州": "荆州"
     };
     const categoryLayerKeys = {
       hotel: "hotel",
@@ -8548,7 +9527,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
     const dayModeNote = document.getElementById("day-mode-note");
     const cityKeyByStopId = {
       wuhan: "武汉",
-      yichang: "宜昌"
+      yichang: "宜昌",
+      xiangyang: "襄阳",
+      jingzhou: "荆州"
     };
 
     const transitModeMeta = {
