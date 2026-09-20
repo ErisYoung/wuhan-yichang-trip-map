@@ -2373,6 +2373,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
       backdrop-filter: blur(8px);
     }
 
+    /* 桌面操作条浮在侧栏底部，给内部滚动区留出等高的底部空间，避免遮住最后的备选点。 */
+    @media (min-width: 821px) {
+      .poi-detail-day-list-panel,
+      .poi-detail-main {
+        padding-bottom: 84px;
+      }
+
+      aside:not(.detail-mode) {
+        padding-bottom: 22px;
+      }
+    }
+
     .desktop-actions-buttons {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
