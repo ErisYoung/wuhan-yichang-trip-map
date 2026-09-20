@@ -2387,7 +2387,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
     .desktop-actions-buttons {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 8px;
       padding: 10px 14px 12px;
     }
@@ -3104,6 +3104,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           <button type="button" data-mirror-action="undo" disabled>撤销上一步</button>
           <button type="button" data-mirror-action="summary" aria-expanded="false">修改汇总</button>
           <button type="button" data-mirror-action="replan">请 Codex 重新安排</button>
+          <button type="button" class="desktop-reset-plan" data-reset-plan>恢复线上默认</button>
         </div>
       </div>
         </aside>
@@ -3204,15 +3205,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "short": "10/01",
       "date": "10/01 周四",
       "city": "武汉",
-      "title": "抵达武汉：晴川阁、长江大桥与黄鹤楼夜场",
-      "summary": "14:17 到武汉站、放行李后打车过江：晴川阁·禹稷行宫（16:30 停止入场）→ 长江大桥日落 → 大成路夜市吃饭 → 黄鹤楼夜场，21:00 回百瑞景。",
+      "title": "抵达武汉：晴川阁开场，武昌夜逛与长堤街宵夜",
+      "summary": "14:17 到武汉站、15:15 放行李后立刻过江去晴川阁（16:30 停止入场），再回武昌逛昙华林、大成路吃晚饭、楚河汉街看夜景，最后到长堤街吃桂萍牛杂宵夜（吃不下就删）。",
       "color": "#2F6E8E",
       "travel": true,
       "events": [
         {
           "time": "15:15",
           "title": "入住百瑞景中央生活区六期（宝通寺/丁字桥）",
-          "note": "G590 06:20 温州南发车、14:17 到武汉站；4号线中南路换2号线到宝通寺。放行李后打车过江，先赶晴川阁（16:30 停止入场）。",
+          "note": "G590 06:20 温州南发车、14:17 到武汉站；放下行李立刻打车过江——晴川阁 16:30 停止入场，这是今天唯一不能晚的点。",
           "coords": [
             30.5318,
             114.3385
@@ -3220,45 +3221,54 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "routeBreakBefore": true
         },
         {
-          "time": "16:00",
+          "time": "16:10",
           "title": "晴川阁 · 禹稷行宫",
-          "note": "免费需预约；晴川楼、禹稷行宫与铁门关一起看约 40 分钟。",
+          "note": "免费需预约；晴川楼+禹稷行宫+铁门关约 40 分钟，17:00 出景区。",
           "coords": [
             30.5587,
             114.2798
           ]
         },
         {
-          "time": "17:15",
-          "title": "长江大桥",
-          "note": "汉阳桥头看日落（10/1 日落约 17:50），看完从桥上步行过江回武昌。",
+          "time": "17:30",
+          "title": "昙华林",
+          "note": "打车过江约 25–30 分钟；傍晚人少，沿主街走 45 分钟。",
           "coords": [
-            30.5478,
-            114.2985
+            30.5535,
+            114.3175
           ]
         },
         {
-          "time": "18:30",
+          "time": "18:45",
           "title": "大成路（过早与夜市）",
-          "note": "晚饭在大成路解决：豆皮、糊汤粉、炸炸与烧烤，价格比户部巷友好。",
+          "note": "晚饭在这里：豆皮、糊汤粉、炸炸与烧烤，先绕一圈再决定吃哪几家。",
           "coords": [
             30.5457,
             114.2914
           ]
         },
         {
-          "time": "19:45",
-          "title": "黄鹤楼（夜场）",
-          "note": "「夜上黄鹤楼」夜场需单独购票；不买票可到司门口 C 口红墙看外观。",
+          "time": "20:30",
+          "title": "楚河汉街",
+          "note": "沿楚河散步看夜景，约 1 小时；不逛就直接去长堤街。",
           "coords": [
-            30.5442,
-            114.3025
+            30.5535,
+            114.3325
           ]
         },
         {
-          "time": "21:00",
+          "time": "22:00",
+          "title": "桂萍特色牛筋牛杂（长堤街总店）",
+          "note": "宵夜大排档，人均约 70 元、饭点排队；吃不下就删掉这一站。",
+          "coords": [
+            30.5728,
+            114.277
+          ]
+        },
+        {
+          "time": "23:00",
           "title": "返回百瑞景（住宿）",
-          "note": "打车约 25 分钟或地铁回宝通寺；早点休息，10/2 早上要过江过早。",
+          "note": "长堤街打车回宝通寺约 25 分钟；明天 06:15 出发过早。",
           "coords": [
             30.5318,
             114.3385
@@ -3279,56 +3289,69 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "poiId": "wh-qingchuan-pavilion",
           "order": 1,
-          "time": "16:00",
+          "time": "16:10",
           "role": "古迹"
         },
         {
-          "poiId": "wh-yangtze-bridge",
+          "poiId": "wh-tanhuafang",
           "order": 2,
-          "time": "17:15",
-          "role": "日落"
+          "time": "17:30",
+          "role": "街区"
         },
         {
           "poiId": "wh-dachenglu",
           "order": 3,
-          "time": "18:30",
+          "time": "18:45",
           "role": "吃饭"
         },
         {
-          "poiId": "wh-huanghelou",
+          "poiId": "wh-chuhe-han-street",
           "order": 4,
-          "time": "19:45",
-          "role": "夜场"
+          "time": "20:30",
+          "role": "夜景"
+        },
+        {
+          "poiId": "wh-guiping-niuzza",
+          "order": 5,
+          "time": "22:00",
+          "role": "宵夜"
         }
       ],
       "transitSegments": [
         {
           "fromPoiId": "wh-hotel-bairuijing",
           "toPoiId": "wh-qingchuan-pavilion",
-          "mode": "打车/地铁",
+          "mode": "打车",
           "minutes": 25,
-          "label": "百瑞景到晴川阁约12公里，打车25-30分钟；也可地铁2号线转6号线到琴台再步行。"
+          "label": "百瑞景到晴川阁约12公里，打车25–30分钟；15:20 前必须出发才能赶上 16:30 停止入场。"
         },
         {
           "fromPoiId": "wh-qingchuan-pavilion",
-          "toPoiId": "wh-yangtze-bridge",
-          "mode": "步行",
-          "minutes": 15,
-          "label": "从晴川阁沿龟山东麓走到汉阳桥头约1公里，15分钟。"
+          "toPoiId": "wh-tanhuafang",
+          "mode": "打车",
+          "minutes": 28,
+          "label": "晴川阁过江到昙华林约 11 公里，打车 25–30 分钟。"
         },
         {
-          "fromPoiId": "wh-yangtze-bridge",
+          "fromPoiId": "wh-tanhuafang",
           "toPoiId": "wh-dachenglu",
-          "mode": "步行",
-          "minutes": 30,
-          "label": "从汉阳桥头步行过长江大桥到武昌桥头，再走约800米到大成路；不想走路可打车绕行约20分钟。"
+          "mode": "打车/步行",
+          "minutes": 15,
+          "label": "昙华林到大成路约 3 公里，打车 12–15 分钟，也可沿得胜桥步行。"
         },
         {
           "fromPoiId": "wh-dachenglu",
-          "toPoiId": "wh-huanghelou",
-          "mode": "步行",
-          "minutes": 12,
-          "label": "大成路到黄鹤楼西门约900米，步行10-15分钟。"
+          "toPoiId": "wh-chuhe-han-street",
+          "mode": "地铁+步行",
+          "minutes": 25,
+          "label": "大成路步行到司门口黄鹤楼站，4号线到楚河汉街站，约 25 分钟。"
+        },
+        {
+          "fromPoiId": "wh-chuhe-han-street",
+          "toPoiId": "wh-guiping-niuzza",
+          "mode": "打车",
+          "minutes": 28,
+          "label": "汉街到长堤街约 11 公里，打车 25–30 分钟；不想跑就删掉这站。"
         }
       ],
       "candidates": [
@@ -3342,15 +3365,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "short": "10/02",
       "date": "10/02 周五",
       "city": "武汉",
-      "title": "汉口过早、江汉路二次元与两江轮渡",
-      "summary": "早上过江到山海关路过早，沿黎黄陂路→江汉路走到 X118 二次元街区，武汉关码头轮渡跨江后逛昙华林，晚上回汉口吃万松园。",
+      "title": "汉口过早三条街、江汉路二次元与黄鹤楼日落",
+      "summary": "06:15 出发过早（山海关路＋严老幺＋刘记三狗按胃口挑），上午走新天地—汉口江滩—黎黄陂路—江汉路，下午 X118 二次元与胜阳楼正餐，16:15 轮渡过江赶黄鹤楼收尾与长江大桥日落，晚上回汉口吃万松园。",
       "color": "#C26A3A",
       "travel": false,
       "events": [
         {
           "time": "06:15",
           "title": "酒店出发 · 百瑞景中央生活区六期",
-          "note": "06:15 出门，2号线宝通寺→江汉路约25分钟，或打车25-30分钟；07:00 前到山海关路。",
+          "note": "2号线宝通寺→江汉路约 25 分钟；06:15 出门，07:00 前到山海关路。",
           "coords": [
             30.5318,
             114.3385
@@ -3360,70 +3383,124 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "time": "07:00",
           "title": "山海关路",
-          "note": "6:30-9:00 最佳；热干面、汽水包、鸡冠饺、烧卖、煨汤。",
+          "note": "过早主线：热干面、汽水包、鸡冠饺、烧卖、煨汤；6:30–9:00 最佳。",
           "coords": [
             30.6045,
             114.3095
           ]
         },
         {
-          "time": "08:45",
+          "time": "08:15",
+          "title": "严老幺烧麦（前进四路店）",
+          "note": "只做早市（6:00–13:00）；重油烧麦、三鲜豆皮，饭点排队。",
+          "coords": [
+            30.5813,
+            114.284961
+          ]
+        },
+        {
+          "time": "09:15",
+          "title": "刘记三狗牛肉面馆",
+          "note": "兰陵路招牌牛肉炒面；当早午餐吃，吃不下就删掉一站。",
+          "coords": [
+            30.5862,
+            114.293
+          ]
+        },
+        {
+          "time": "10:00",
+          "title": "武汉新天地",
+          "note": "老厂房街区，咖啡或拍照 20–30 分钟。",
+          "coords": [
+            30.6055,
+            114.3065
+          ]
+        },
+        {
+          "time": "10:45",
+          "title": "汉口江滩",
+          "note": "沿江步道走一段看江景，约 40 分钟。",
+          "coords": [
+            30.595,
+            114.303
+          ]
+        },
+        {
+          "time": "11:45",
           "title": "黎黄陂路 / 咸安坊",
-          "note": "从山海关路步行约20分钟；看巴公房子、李凡洛夫公馆、咸安坊红砖墙。",
+          "note": "老洋房与里份，约 45 分钟。",
           "coords": [
             30.5905,
             114.2975
           ]
         },
         {
-          "time": "10:45",
+          "time": "12:45",
           "title": "江汉路 / 江汉关",
-          "note": "步行约15分钟；看近代商业建筑，江汉关博物馆如开放可进。",
+          "note": "步行街与江汉关大楼，约 40 分钟。",
           "coords": [
             30.5825,
             114.2915
           ]
         },
         {
-          "time": "12:00",
+          "time": "13:30",
           "title": "潮流盒子·武汉X118（二次元街区）",
-          "note": "谷子店、手办与卡牌店集中在楼里，逛 1–1.5 小时；楼下就是江汉路步行街。",
+          "note": "谷子店、手办与卡牌集中，逛 1–1.5 小时。",
           "coords": [
             30.5845,
             114.2855
           ]
         },
         {
-          "time": "13:30",
+          "time": "15:00",
+          "title": "严记胜阳楼·湖北菜（江汉路店）",
+          "note": "晚午餐/正餐：藕汤、蒸菜与家常湖北菜，进店先取号。",
+          "coords": [
+            30.58,
+            114.285
+          ]
+        },
+        {
+          "time": "16:15",
           "title": "武汉关码头",
-          "note": "江汉关步行约10分钟；乘轮渡到中华路1号码头，约1.3-1.5元、20分钟一班。",
+          "note": "乘轮渡到中华路 1 号码头，约 20 分钟一班、票价 1.3–1.5 元。",
           "coords": [
             30.5795,
             114.2935
           ]
         },
         {
-          "time": "14:00",
+          "time": "16:45",
           "title": "中华路码头",
-          "note": "下船后可先吃碗粉，再往昙华林方向走。",
+          "note": "下船后步行 15 分钟到黄鹤楼西门；这是今晚回武昌/回汉口的换乘点。",
           "coords": [
             30.5505,
             114.3025
           ]
         },
         {
-          "time": "14:45",
-          "title": "昙华林",
-          "note": "近代建筑与文创小店集中的低强度 citywalk 街区，主街约1小时。",
+          "time": "17:00",
+          "title": "黄鹤楼",
+          "note": "日场 16:30 前入园——赶不上就只到司门口 C 口红墙看外观，夜场另约。",
           "coords": [
-            30.5535,
-            114.3175
+            30.5442,
+            114.3025
           ]
         },
         {
-          "time": "19:00",
+          "time": "17:45",
+          "title": "长江大桥",
+          "note": "从汉阳门武昌里上桥看日落（约 17:50），走一段再下桥。",
+          "coords": [
+            30.5478,
+            114.2985
+          ]
+        },
+        {
+          "time": "19:15",
           "title": "万松园晚餐",
-          "note": "从昙华林回中华路码头轮渡回汉口，再打车到万松园；小龙虾、烧烤、牛肉面。",
+          "note": "18:30 回中华路码头轮渡回武汉关，再打车 15 分钟到万松园；小龙虾、烧烤、牛肉面。",
           "coords": [
             30.5855,
             114.2685
@@ -3432,7 +3509,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "time": "21:00",
           "title": "返回百瑞景（住宿）",
-          "note": "2号线王家墩东/青年路→宝通寺；或打车约25分钟。",
+          "note": "2号线王家墩东/青年路→宝通寺；或打车约 25 分钟。",
           "coords": [
             30.5318,
             114.3385
@@ -3457,45 +3534,81 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "role": "过早"
         },
         {
-          "poiId": "wh-lihuangpi-road",
+          "poiId": "wh-yanyao-shaomai",
           "order": 2,
-          "time": "08:45",
+          "time": "08:15",
+          "role": "过早"
+        },
+        {
+          "poiId": "wh-liuji-sangou",
+          "order": 3,
+          "time": "09:15",
+          "role": "早午餐"
+        },
+        {
+          "poiId": "wh-wuhan-tiandi",
+          "order": 4,
+          "time": "10:00",
+          "role": "街区"
+        },
+        {
+          "poiId": "wh-hankou-jiangtan",
+          "order": 5,
+          "time": "10:45",
+          "role": "江滩"
+        },
+        {
+          "poiId": "wh-lihuangpi-road",
+          "order": 6,
+          "time": "11:45",
           "role": "街区"
         },
         {
           "poiId": "wh-jianghan-road",
-          "order": 3,
-          "time": "10:45",
+          "order": 7,
+          "time": "12:45",
           "role": "街区"
         },
         {
           "poiId": "wh-x118",
-          "order": 4,
-          "time": "12:00",
+          "order": 8,
+          "time": "13:30",
           "role": "二次元"
         },
         {
+          "poiId": "wh-shengyang-lou",
+          "order": 9,
+          "time": "15:00",
+          "role": "正餐"
+        },
+        {
           "poiId": "wh-wuhanguan-ferry",
-          "order": 5,
-          "time": "13:30",
+          "order": 10,
+          "time": "16:15",
           "role": "轮渡"
         },
         {
           "poiId": "wh-zhonghualu-ferry",
-          "order": 6,
-          "time": "14:00",
+          "order": 11,
+          "time": "16:45",
           "role": "轮渡"
         },
         {
-          "poiId": "wh-tanhuafang",
-          "order": 7,
-          "time": "14:45",
-          "role": "街区"
+          "poiId": "wh-huanghelou",
+          "order": 12,
+          "time": "17:00",
+          "role": "著名景区"
+        },
+        {
+          "poiId": "wh-yangtze-bridge",
+          "order": 13,
+          "time": "17:45",
+          "role": "日落"
         },
         {
           "poiId": "wh-wansongyuan",
-          "order": 8,
-          "time": "19:00",
+          "order": 14,
+          "time": "19:15",
           "role": "吃饭"
         }
       ],
@@ -3505,56 +3618,98 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "toPoiId": "wh-shanhaiguan-road",
           "mode": "地铁+步行",
           "minutes": 30,
-          "label": "2号线宝通寺→江汉路约25分钟，再步行或打车到山海关路。"
+          "label": "2号线宝通寺→江汉路约 25 分钟，再步行或打车到山海关路。"
         },
         {
           "fromPoiId": "wh-shanhaiguan-road",
+          "toPoiId": "wh-yanyao-shaomai",
+          "mode": "打车/步行",
+          "minutes": 12,
+          "label": "山海关路到前进四路约 1.5 公里，步行 20 分钟或打车 8 分钟。"
+        },
+        {
+          "fromPoiId": "wh-yanyao-shaomai",
+          "toPoiId": "wh-liuji-sangou",
+          "mode": "打车/步行",
+          "minutes": 12,
+          "label": "循礼门到兰陵路约 1.5 公里；只做早市，务必排在中午前。"
+        },
+        {
+          "fromPoiId": "wh-liuji-sangou",
+          "toPoiId": "wh-wuhan-tiandi",
+          "mode": "步行",
+          "minutes": 15,
+          "label": "兰陵路向西北步行约 1 公里到新天地。"
+        },
+        {
+          "fromPoiId": "wh-wuhan-tiandi",
+          "toPoiId": "wh-hankou-jiangtan",
+          "mode": "步行",
+          "minutes": 15,
+          "label": "新天地走到沿江大道江滩入口约 1 公里。"
+        },
+        {
+          "fromPoiId": "wh-hankou-jiangtan",
           "toPoiId": "wh-lihuangpi-road",
           "mode": "步行",
-          "minutes": 20,
-          "label": "沿山海关路向西南步行约1.5公里进入黎黄陂路。"
+          "minutes": 18,
+          "label": "江滩往南步行约 1.3 公里进黎黄陂路。"
         },
         {
           "fromPoiId": "wh-lihuangpi-road",
           "toPoiId": "wh-jianghan-road",
           "mode": "步行",
           "minutes": 15,
-          "label": "从黎黄陂路向东南步行约1公里到江汉路。"
+          "label": "黎黄陂路向东南步行约 1 公里到江汉路。"
         },
         {
           "fromPoiId": "wh-jianghan-road",
           "toPoiId": "wh-x118",
           "mode": "步行",
           "minutes": 8,
-          "label": "江汉路步行街往中山大道方向约600米，步行8分钟。"
+          "label": "江汉路步行街往中山大道方向约 600 米。"
         },
         {
           "fromPoiId": "wh-x118",
+          "toPoiId": "wh-shengyang-lou",
+          "mode": "步行",
+          "minutes": 6,
+          "label": "X118 出门回步行街约 400 米，胜阳楼在中山大道大洋百货一侧。"
+        },
+        {
+          "fromPoiId": "wh-shengyang-lou",
           "toPoiId": "wh-wuhanguan-ferry",
           "mode": "步行",
           "minutes": 12,
-          "label": "X118 出门沿步行街向江边走到武汉关码头约900米。"
+          "label": "沿步行街向江边走约 900 米到武汉关码头。"
         },
         {
           "fromPoiId": "wh-wuhanguan-ferry",
           "toPoiId": "wh-zhonghualu-ferry",
           "mode": "轮渡",
           "minutes": 20,
-          "label": "武汉关—中华路1号码头，约20分钟一班，票价约1.3-1.5元。"
+          "label": "武汉关—中华路 1 号码头，约 20 分钟一班，票价约 1.3–1.5 元。"
         },
         {
           "fromPoiId": "wh-zhonghualu-ferry",
-          "toPoiId": "wh-tanhuafang",
+          "toPoiId": "wh-huanghelou",
           "mode": "步行",
           "minutes": 15,
-          "label": "下船后向东北步行约1.2公里进昙华林。"
+          "label": "下船步行约 1 公里到黄鹤楼西门；日场 16:30 前入园。"
         },
         {
-          "fromPoiId": "wh-tanhuafang",
+          "fromPoiId": "wh-huanghelou",
+          "toPoiId": "wh-yangtze-bridge",
+          "mode": "步行",
+          "minutes": 15,
+          "label": "从西门向江边走 1 公里到汉阳门武昌里上桥。"
+        },
+        {
+          "fromPoiId": "wh-yangtze-bridge",
           "toPoiId": "wh-wansongyuan",
           "mode": "步行+轮渡+打车",
-          "minutes": 40,
-          "label": "昙华林→中华路码头→轮渡回武汉关→打车到万松园，约40分钟。"
+          "minutes": 45,
+          "label": "下桥回中华路码头→轮渡回武汉关（末班约 20:00）→打车到万松园；赶不上就全程打车。"
         }
       ],
       "candidates": [
@@ -3575,15 +3730,15 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "short": "10/03",
       "date": "10/03 周六",
       "city": "武汉",
-      "title": "省博与东湖划船",
-      "summary": "10/3 睡到自然醒，粮道街早午餐；下午湖北省博物馆看越王勾践剑与曾侯乙编钟，随后到楚风园码头乘东湖游船或皮划艇，傍晚凌波门/东湖绿道，晚上楚河汉街吃饭。",
+      "title": "省博、东湖水上项目三选一与凌波门日落",
+      "summary": "11:00 粮道街早午餐，13:00 省博，16:00 东湖游船；皮划艇/桨板与帆船按体力和天气二选一，17:45 赶到凌波门看日落，19:00 湖心岛散步/帆船，20:15 汉街吃肥肥虾庄。",
       "color": "#2F6E8E",
       "travel": false,
       "events": [
         {
           "time": "09:30",
           "title": "酒店出发 · 百瑞景中央生活区六期",
-          "note": "酒店附近或粮道街吃早午餐；不赶早，出门前确认省博预约码与东湖游船天气。",
+          "note": "酒店附近或粮道街吃早午餐；出门前确认省博预约码与东湖水上项目天气。",
           "coords": [
             30.5318,
             114.3385
@@ -3602,25 +3757,34 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "time": "13:00",
           "title": "湖北省博物馆",
-          "note": "预约13:00-15:00时段；按越王勾践剑→曾侯乙编钟→梁庄王→陶瓷顺序，约3小时。",
+          "note": "预约 13:00–15:00 时段；越王勾践剑→曾侯乙编钟→梁庄王，约 2.5 小时。",
           "coords": [
             30.5637,
             114.3653
           ]
         },
         {
-          "time": "16:30",
-          "title": "楚风园码头",
-          "note": "从省博北门打车约10分钟；东湖游船楚风园—磨山单程约40元、往返约70元。",
+          "time": "16:00",
+          "title": "东湖游船（楚风园—磨山）",
+          "note": "楚风园—磨山单程约 40 元、往返约 70 元；约 1 小时。",
           "coords": [
             30.5778,
             114.364
           ]
         },
         {
-          "time": "17:30",
+          "time": "17:00",
+          "title": "东湖皮划艇 / 桨板",
+          "note": "磨山楚城约 80 元/小时；与游船同为水上项目，二选一，时间紧就删掉这站。",
+          "coords": [
+            30.553,
+            114.403
+          ]
+        },
+        {
+          "time": "17:45",
           "title": "凌波门 / 东湖南路",
-          "note": "从磨山或听涛打车/骑行到凌波门，看日落与湖面；约40分钟。",
+          "note": "日落约 17:50，这站是为日落排的，建议优先保住。",
           "coords": [
             30.5405,
             114.3665
@@ -3628,17 +3792,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         },
         {
           "time": "19:00",
+          "title": "东湖湖心岛（帆船公园）",
+          "note": "帆船公园与动物博物馆所在地；帆船/桨板开到约 20:00，也可只环岛散步。",
+          "coords": [
+            30.5633,
+            114.3875
+          ]
+        },
+        {
+          "time": "20:15",
           "title": "肥肥虾庄（汉街店）",
-          "note": "或汉街其他餐厅；饭后打车或地铁4号线→中南路换2号线回宝通寺/百瑞景，约20-25分钟。",
+          "note": "晚餐；排队久就改粮道街或汉街其他店。",
           "coords": [
             30.553,
             114.332
           ]
         },
         {
-          "time": "20:30",
+          "time": "21:30",
           "title": "返回百瑞景（住宿）",
-          "note": "打车或4号线中南路换2号线回宝通寺/百瑞景，约20-25分钟；早睡，10/4宜昌日04:30出发。",
+          "note": "打车或 4号线转 2号线回宝通寺，约 20–25 分钟。",
           "coords": [
             30.5318,
             114.3385
@@ -3661,7 +3834,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "poiId": "wh-liangdao-street",
           "order": 1,
           "time": "11:00",
-          "role": "过早/午餐"
+          "role": "早午餐"
         },
         {
           "poiId": "wh-hubei-museum",
@@ -3672,19 +3845,31 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {
           "poiId": "wh-donghu-boat",
           "order": 3,
-          "time": "16:30",
-          "role": "划船"
+          "time": "16:00",
+          "role": "游船"
+        },
+        {
+          "poiId": "wh-donghu-kayak",
+          "order": 4,
+          "time": "17:00",
+          "role": "皮划艇"
         },
         {
           "poiId": "wh-lingbomen",
-          "order": 4,
-          "time": "17:30",
+          "order": 5,
+          "time": "17:45",
           "role": "日落"
         },
         {
-          "poiId": "wh-feifei-shrimp-chuhe",
-          "order": 5,
+          "poiId": "wh-donghu-huxindao",
+          "order": 6,
           "time": "19:00",
+          "role": "帆船/散步"
+        },
+        {
+          "poiId": "wh-feifei-shrimp-chuhe",
+          "order": 7,
+          "time": "20:15",
           "role": "吃饭"
         }
       ],
@@ -3694,35 +3879,49 @@ svg.leaflet-image-layer.leaflet-interactive path {
           "toPoiId": "wh-liangdao-street",
           "mode": "打车",
           "minutes": 18,
-          "label": "百瑞景到粮道街约6公里，打车15-20分钟。"
+          "label": "百瑞景到粮道街约 6 公里，打车 15–20 分钟。"
         },
         {
           "fromPoiId": "wh-liangdao-street",
           "toPoiId": "wh-hubei-museum",
           "mode": "打车",
           "minutes": 15,
-          "label": "粮道街到省博南门约4公里，打车15分钟。"
+          "label": "粮道街到省博南门约 4 公里，打车 15 分钟；南门进北门出。"
         },
         {
           "fromPoiId": "wh-hubei-museum",
           "toPoiId": "wh-donghu-boat",
           "mode": "打车",
           "minutes": 10,
-          "label": "省博北门到楚风园码头约3公里，打车10分钟。"
+          "label": "省博北门到楚风园码头约 3 公里，打车 10 分钟。"
         },
         {
           "fromPoiId": "wh-donghu-boat",
-          "toPoiId": "wh-lingbomen",
+          "toPoiId": "wh-donghu-kayak",
           "mode": "打车/骑行",
           "minutes": 15,
-          "label": "磨山或听涛到凌波门约5公里，打车或绿道骑行15分钟。"
+          "label": "磨山到楚城/湖心岛方向约 4 公里；两项水上项目二选一。"
+        },
+        {
+          "fromPoiId": "wh-donghu-kayak",
+          "toPoiId": "wh-lingbomen",
+          "mode": "打车",
+          "minutes": 15,
+          "label": "磨山到凌波门约 5 公里，打车 15 分钟；务必 17:40 前到。"
         },
         {
           "fromPoiId": "wh-lingbomen",
+          "toPoiId": "wh-donghu-huxindao",
+          "mode": "打车/骑行",
+          "minutes": 18,
+          "label": "凌波门到湖心岛（帆船公园）约 5 公里，打车或绿道骑行。"
+        },
+        {
+          "fromPoiId": "wh-donghu-huxindao",
           "toPoiId": "wh-feifei-shrimp-chuhe",
           "mode": "打车",
-          "minutes": 15,
-          "label": "凌波门到楚河汉街约5公里，打车15分钟。"
+          "minutes": 20,
+          "label": "湖心岛到楚河汉街约 6 公里，打车约 20 分钟。"
         }
       ],
       "candidates": [
@@ -4349,35 +4548,42 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "distance": "约12公里",
         "duration": "约25分钟",
         "summary": "百瑞景到晴川阁",
-        "detail": "打车25–30分钟；或地铁2号线转6号线到琴台，再步行到晴川阁。"
-      },
-      {
-        "mode": "walk",
-        "distance": "约1公里",
-        "duration": "约15分钟",
-        "summary": "晴川阁到长江大桥",
-        "detail": "沿龟山东麓走到汉阳桥头，上桥前可看铁门关。"
-      },
-      {
-        "mode": "walk",
-        "distance": "约2.5公里",
-        "duration": "约30分钟",
-        "summary": "长江大桥到大成路",
-        "detail": "步行过桥到武昌桥头，再走约800米；10/1 日落约 17:50。"
-      },
-      {
-        "mode": "walk",
-        "distance": "约900米",
-        "duration": "约12分钟",
-        "summary": "大成路到黄鹤楼",
-        "detail": "步行到黄鹤楼西门；夜场需单独购票。"
+        "detail": "打车 25–30 分钟；15:20 前出发，确保 16:30 前入场。"
       },
       {
         "mode": "transit",
-        "distance": "约8公里",
+        "distance": "约11公里",
+        "duration": "约28分钟",
+        "summary": "晴川阁到昙华林",
+        "detail": "过江打车 25–30 分钟；也可先到司门口再步行。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约3公里",
+        "duration": "约15分钟",
+        "summary": "昙华林到大成路",
+        "detail": "打车 12–15 分钟；晚饭在这里解决。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约6公里",
         "duration": "约25分钟",
-        "summary": "黄鹤楼回百瑞景",
-        "detail": "打车约25分钟或地铁回宝通寺，21:00 前回住地。"
+        "summary": "大成路到楚河汉街",
+        "detail": "4号线两站到楚河汉街，出站即汉街。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约11公里",
+        "duration": "约28分钟",
+        "summary": "楚河汉街到长堤街桂萍牛杂",
+        "detail": "打车 25–30 分钟；吃不下可跳到回酒店。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约10公里",
+        "duration": "约25分钟",
+        "summary": "长堤街回百瑞景",
+        "detail": "打车约 25 分钟；23:00 前回到住地。"
       }
     ],
     "d1002": [
@@ -4389,11 +4595,39 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "detail": "2号线到江汉路再步行/打车；06:15 出发，7 点前到。"
       },
       {
-        "mode": "walk",
+        "mode": "transit",
         "distance": "约1.5公里",
-        "duration": "约20分钟",
-        "summary": "山海关路到黎黄陂路",
-        "detail": "沿老街向西南步行，经过武汉新天地一带。"
+        "duration": "约12分钟",
+        "summary": "山海关路到严老幺烧麦",
+        "detail": "步行 20 分钟或打车 8 分钟；只做早市（6:00–13:00）。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约1.5公里",
+        "duration": "约12分钟",
+        "summary": "严老幺到刘记三狗",
+        "detail": "循礼门到兰陵路；当早午餐，吃不下就删一站。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约1公里",
+        "duration": "约15分钟",
+        "summary": "刘记三狗到武汉新天地",
+        "detail": "沿老街向西北步行，顺路看里份。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约1公里",
+        "duration": "约15分钟",
+        "summary": "新天地到汉口江滩",
+        "detail": "走到沿江大道进江滩，沿步道走一段。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约1.3公里",
+        "duration": "约18分钟",
+        "summary": "汉口江滩到黎黄陂路",
+        "detail": "往南步行进老街区，沿途咖啡馆多。"
       },
       {
         "mode": "walk",
@@ -4407,13 +4641,20 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "distance": "约600米",
         "duration": "约8分钟",
         "summary": "江汉路到 X118",
-        "detail": "步行街往中山大道方向；商场内店铺见当日导览。"
+        "detail": "步行街往中山大道方向；店铺见当日导览。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约400米",
+        "duration": "约6分钟",
+        "summary": "X118 到胜阳楼",
+        "detail": "回步行街，中山大道大洋百货一侧；进店先取号。"
       },
       {
         "mode": "walk",
         "distance": "约900米",
         "duration": "约12分钟",
-        "summary": "X118 到武汉关码头",
+        "summary": "胜阳楼到武汉关码头",
         "detail": "沿步行街向江边走，路过江汉关大楼。"
       },
       {
@@ -4421,37 +4662,44 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "distance": "长江横渡",
         "duration": "约20分钟",
         "summary": "武汉关码头到中华路码头",
-        "detail": "约20分钟一班，票价约1.3–1.5元。"
+        "detail": "约 20 分钟一班，票价 1.3–1.5 元。"
       },
       {
         "mode": "walk",
-        "distance": "约1.2公里",
+        "distance": "约1公里",
         "duration": "约15分钟",
-        "summary": "中华路码头到昙华林",
-        "detail": "下船后向东北步行进街区，沿途可先吃碗粉。"
+        "summary": "中华路码头到黄鹤楼",
+        "detail": "步行到黄鹤楼西门；日场 16:30 前入园，错过就改红墙/夜场。"
+      },
+      {
+        "mode": "walk",
+        "distance": "约1公里",
+        "duration": "约15分钟",
+        "summary": "黄鹤楼到长江大桥",
+        "detail": "向江边走，17:45 前上桥看日落（约 17:50）。"
       },
       {
         "mode": "mixed",
         "distance": "约6公里+轮渡",
-        "duration": "约40分钟",
-        "summary": "昙华林回汉口万松园",
-        "detail": "昙华林→中华路码头→轮渡回武汉关→打车到万松园；中途可加楚河汉街/户部巷。"
+        "duration": "约45分钟",
+        "summary": "长江大桥回汉口万松园",
+        "detail": "下桥回中华路码头→轮渡（末班约 20:00）→打车；赶不上就全程打车。"
       },
       {
         "mode": "transit",
         "distance": "约8公里",
         "duration": "约25分钟",
         "summary": "万松园回百瑞景",
-        "detail": "2号线王家墩东/青年路→宝通寺；或打车约25分钟。"
+        "detail": "2号线王家墩东/青年路→宝通寺；或打车约 25 分钟。"
       }
     ],
     "d1003": [
       {
         "mode": "transit",
         "distance": "约6公里",
-        "duration": "约15-20分钟",
+        "duration": "约18分钟",
         "summary": "百瑞景到粮道街",
-        "detail": "打车15-20分钟；10/3不赶早。"
+        "detail": "打车 15–20 分钟；10/3 不赶早。"
       },
       {
         "mode": "transit",
@@ -4470,16 +4718,44 @@ svg.leaflet-image-layer.leaflet-interactive path {
       {
         "mode": "boat",
         "distance": "湖面航线",
-        "duration": "约30-60分钟",
-        "summary": "东湖游船",
-        "detail": "楚风园—磨山单程约40元、往返约70元；也可改皮划艇/桨板。"
+        "duration": "约1小时",
+        "summary": "东湖游船（楚风园—磨山）",
+        "detail": "单程约 40 元、往返约 70 元；与皮划艇/帆船二选一。"
+      },
+      {
+        "mode": "boat",
+        "distance": "磨山楚城",
+        "duration": "约1小时",
+        "summary": "皮划艇 / 桨板",
+        "detail": "约 80 元/小时；时间紧就删掉这一站。"
       },
       {
         "mode": "transit",
         "distance": "约5公里",
         "duration": "约15分钟",
-        "summary": "东湖到凌波门/汉街",
-        "detail": "看日落后打车回楚河汉街吃晚餐。"
+        "summary": "磨山到凌波门",
+        "detail": "17:40 前到凌波门看日落（约 17:50）。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约5公里",
+        "duration": "约18分钟",
+        "summary": "凌波门到湖心岛",
+        "detail": "帆船公园开到约 20:00；也可只散步环岛。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约6公里",
+        "duration": "约20分钟",
+        "summary": "湖心岛到汉街晚餐",
+        "detail": "打车约 20 分钟到肥肥虾庄（汉街店）。"
+      },
+      {
+        "mode": "transit",
+        "distance": "约5公里",
+        "duration": "约20分钟",
+        "summary": "汉街回百瑞景",
+        "detail": "打车或 4号线转 2号线回宝通寺。"
       }
     ],
     "d1004": [
@@ -6656,9 +6932,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.403
       ],
       "note": "磨山楚城与湖心岛帆船公园提供皮划艇、桨板和帆船体验，价格约68-128元，需提前电话预约；天气和水位会影响开放。",
-      "contentTier": "compact",
-      "plan": "如果‘东湖划船’指自己划，替代东湖游船；安排在10/3下午。",
-      "tip": "穿速干衣、注意防晒；不会游泳也可参加有救生衣的项目。",
+      "contentTier": "standard",
+      "whyWorthIt": "磨山楚城与湖心岛帆船公园能自己划皮划艇、桨板或体验帆船，价格约 68–128 元；从水面看磨山与湖心岛比在岸上走更有意思，是东湖日里最“动起来”的一项。",
+      "detailSections": [
+        {
+          "title": "玩什么",
+          "items": [
+            "皮划艇约 68–80 元/小时、桨板约 128 元、帆船体验约 118 元，需提前电话预约",
+            "现场有救生衣与教练，不会游泳也能参加；穿速干衣并做好防晒"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "和东湖游船二选一；两个都想玩就只坐单程游船",
+            "大风或水位异常会停航，出发前一天电话确认"
+          ]
+        }
+      ],
+      "plan": "10/3 下午的水上项目：游船之后 17:00 到磨山楚城玩 1 小时；时间紧就删掉这一站。",
+      "tip": "雨天与大风可能停运；价格与开放时段以运营方当日信息为准。",
       "source": "东湖水上运动公开信息",
       "evidenceSources": [
         {
@@ -6805,9 +7098,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.303
       ],
       "note": "汉口江滩是长条形滨江公园，夜间看两江灯光与长江大桥，江滩沙细、步道平缓；与江汉路、武汉关码头顺路。",
-      "contentTier": "compact",
-      "plan": "10/2轮渡回汉口后可在江滩走一段再吃万松园。",
-      "tip": "夜间江风大；玩水去三阳广场段，注意安全提示。",
+      "contentTier": "standard",
+      "whyWorthIt": "汉口江滩是沿长江的带状公园，步道平缓、视野开阔，能看到长江二桥与对岸武昌天际线；它北接武汉新天地、南连江汉路与武汉关码头，10/2 上午沿江走一段正好把汉口几个点串成一条线。",
+      "detailSections": [
+        {
+          "title": "看什么",
+          "items": [
+            "沿江步道看货轮与两岸天际线，芦苇湿地段适合拍照",
+            "三阳广场一带水面开阔，江风大注意帽子与外套"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "从新天地步行 15 分钟进江滩，往南走到江汉路约 40 分钟",
+            "江滩很长，按体力只走其中一段，不必走完"
+          ]
+        }
+      ],
+      "plan": "10/2 上午第四站：10:45 从新天地进江滩，沿江走到江汉路方向。",
+      "tip": "夜间江风大、部分区域灯光偏暗；汛期个别步道会临时封闭，看现场提示。",
       "source": "小红书攻略",
       "evidenceSources": [
         {
@@ -7074,9 +7384,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.3065
       ],
       "note": "武汉新天地由老厂房与街区商业组成，咖啡、餐饮与小店集中，可与山海关路、黎黄陂路串线。",
-      "contentTier": "compact",
-      "plan": "10/2上午如时间富余，从山海关路步行或打车加入。",
-      "tip": "商业街区，消费高于老街区。",
+      "contentTier": "standard",
+      "whyWorthIt": "由老厂房与里份改造的街区，咖啡馆、小酒馆和买手店集中在几条街里，红砖墙与旧厂房很出片；它就在山海关路与黎黄陂路之间，过早之后顺路走 10 分钟就到，不用专门绕路。",
+      "detailSections": [
+        {
+          "title": "看什么",
+          "items": [
+            "老厂房改造的红砖建筑、里份巷子与涂鸦墙，适合边走边拍",
+            "咖啡与面包店集中，可当中途歇脚点"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "放在山海关路之后、汉口江滩之前，20–30 分钟即可",
+            "商业街区消费高于老街区，按需点单"
+          ]
+        }
+      ],
+      "plan": "10/2 上午第三站：过早之后步行过来喝杯咖啡，再走去汉口江滩。",
+      "tip": "店铺开关与营业时间调整频繁，节假日部分店排队；以现场指示为准。",
       "source": "小红书攻略",
       "evidenceSources": [
         {
@@ -7375,9 +7702,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.284961
       ],
       "note": "江汉区前进四路240号（原自治街240号），循礼门地铁C口步行约480米；重油烧麦、三鲜豆皮、热干面；6:00-13:00，饭点排队。",
-      "contentTier": "compact",
-      "plan": "10/2早上作为山海关路的替代或加餐；从循礼门步行到江汉路/黎黄陂路都近。",
-      "tip": "只做早市，下午不营业；高德坐标30.581300,114.284961；出发前复核营业时间。",
+      "contentTier": "standard",
+      "whyWorthIt": "前进四路的老牌过早铺，重油烧麦配三鲜豆皮是本地人的标准吃法，人均 10–20 元；从循礼门地铁 C 口步行约 480 米，正好接在山海关路之后，把汉口最有代表性的两处过早连成一条线。",
+      "detailSections": [
+        {
+          "title": "吃什么",
+          "items": [
+            "重油烧麦、三鲜豆皮、热干面；两人分食，避免第一家就吃饱",
+            "8 点前后排队 10–20 分钟，想省时间就 7 点半前到"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "只做早市 6:00–13:00，务必排在中午之前",
+            "从山海关路打车约 8 分钟；吃完步行可达江汉路、黎黄陂路"
+          ]
+        }
+      ],
+      "plan": "10/2 早上第二站：08:15 前后到；山海关路、严老幺、刘记三狗三家按胃口挑 1–2 家。",
+      "tip": "下午不营业；高德坐标 30.581300,114.284961，出发前复核节假日营业与排队情况。",
       "source": "高德/百度百科：严老幺烧麦前进四路店",
       "evidenceSources": [
         {
@@ -7412,9 +7756,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.293
       ],
       "note": "江岸区兰陵路86号（部分地图写47号，需复核）；招牌牛肉炒面、牛肚炒面；人均约18-25元；近黎黄陂路/江汉路。",
-      "contentTier": "compact",
-      "plan": "10/2汉口线午餐候选；从黎黄陂路或江汉路步行可达。",
-      "tip": "周末/节假日排队；规划级近似定位，出发前用高德复核门牌与营业时间。",
+      "contentTier": "standard",
+      "whyWorthIt": "兰陵路的老牌面馆，招牌是牛肉炒面与牛肚炒面，锅气足、分量大，人均 18–25 元；离黎黄陂路与江汉路都在步行圈内，逛老街区时顺路吃一顿最省时间。",
+      "detailSections": [
+        {
+          "title": "吃什么",
+          "items": [
+            "牛肉炒面、牛肚炒面是招牌，可另点一份牛杂汤",
+            "分量偏大，两人点一份面加一份汤即可"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "当 10/2 的早午餐，排在新天地与江汉路之间",
+            "节假日排队明显，先取号再去附近逛"
+          ]
+        }
+      ],
+      "plan": "10/2 早午餐站：09:15 前后到，和严老幺、山海关路三选二。",
+      "tip": "门牌有 86 号与 47 号两种说法，出发前用高德复核门牌与营业时间。",
       "source": "百度百科/携程：刘记三狗牛肉面馆",
       "evidenceSources": [
         {
@@ -7448,9 +7809,26 @@ svg.leaflet-image-layer.leaflet-interactive path {
         114.277
       ],
       "note": "硚口区长堤街大排档麻木老地方旁（唐家巷义烈巷间）；牛肉牛杂锅、大排档，人均约70元；饭点排队。",
-      "contentTier": "compact",
-      "plan": "10/1晚或10/2夜宵备选；离江汉路/万松园约2-3公里，不为它单独横穿城市。",
-      "tip": "来源为大众点评/城市吧，电话13971607701；规划级近似定位，出发前用高德复核营业与排队。",
+      "contentTier": "standard",
+      "whyWorthIt": "长堤街是硚口的老大排档一条街，桂萍的牛筋牛杂锅重油重辣、分量足，晚上开到很晚；从汉正街或江汉路打车约 10–15 分钟，逛完江滩、汉街后来当宵夜最合适，人均约 70 元。",
+      "detailSections": [
+        {
+          "title": "吃什么",
+          "items": [
+            "招牌牛筋牛杂锅，可加牛肉、千张与青菜；两人点小锅加两个小菜就够",
+            "饭点与夜宵时段都要排队，先取号或错峰到 21:00 之后"
+          ]
+        },
+        {
+          "title": "怎么安排",
+          "items": [
+            "从江汉路、万松园打车约 10–15 分钟；高德搜“桂萍特色牛筋牛杂 长堤街”",
+            "座位以户外大排档为主，雨天体验会打折，可改到室内店"
+          ]
+        }
+      ],
+      "plan": "10/1 宵夜：逛完楚河汉街打车约 25–30 分钟过来；吃不下或太累就删掉这一站。",
+      "tip": "规划级定位（长堤街唐家巷与义烈巷之间，店电话 13971607701）；出发前用高德复核营业时间与排队。",
       "source": "大众点评/城市吧：桂萍特色牛筋牛杂长堤街总店",
       "evidenceSources": [
         {
@@ -8222,7 +8600,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "order": 1
     },
     {
-      "poiId": "wh-yangtze-bridge",
+      "poiId": "wh-tanhuafang",
       "dayId": "d1001",
       "order": 2
     },
@@ -8232,9 +8610,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "order": 3
     },
     {
-      "poiId": "wh-huanghelou",
+      "poiId": "wh-chuhe-han-street",
       "dayId": "d1001",
       "order": 4
+    },
+    {
+      "poiId": "wh-guiping-niuzza",
+      "dayId": "d1001",
+      "order": 5
     },
     {
       "poiId": "wh-shanhaiguan-road",
@@ -8242,39 +8625,104 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "order": 1
     },
     {
-      "poiId": "wh-lihuangpi-road",
+      "poiId": "wh-yanyao-shaomai",
       "dayId": "d1002",
       "order": 2
     },
     {
-      "poiId": "wh-jianghan-road",
+      "poiId": "wh-liuji-sangou",
       "dayId": "d1002",
       "order": 3
     },
     {
-      "poiId": "wh-x118",
+      "poiId": "wh-wuhan-tiandi",
       "dayId": "d1002",
       "order": 4
     },
     {
-      "poiId": "wh-wuhanguan-ferry",
+      "poiId": "wh-hankou-jiangtan",
       "dayId": "d1002",
       "order": 5
     },
     {
-      "poiId": "wh-zhonghualu-ferry",
+      "poiId": "wh-lihuangpi-road",
       "dayId": "d1002",
       "order": 6
     },
     {
-      "poiId": "wh-tanhuafang",
+      "poiId": "wh-jianghan-road",
       "dayId": "d1002",
       "order": 7
     },
     {
-      "poiId": "wh-wansongyuan",
+      "poiId": "wh-x118",
       "dayId": "d1002",
       "order": 8
+    },
+    {
+      "poiId": "wh-shengyang-lou",
+      "dayId": "d1002",
+      "order": 9
+    },
+    {
+      "poiId": "wh-wuhanguan-ferry",
+      "dayId": "d1002",
+      "order": 10
+    },
+    {
+      "poiId": "wh-zhonghualu-ferry",
+      "dayId": "d1002",
+      "order": 11
+    },
+    {
+      "poiId": "wh-huanghelou",
+      "dayId": "d1002",
+      "order": 12
+    },
+    {
+      "poiId": "wh-yangtze-bridge",
+      "dayId": "d1002",
+      "order": 13
+    },
+    {
+      "poiId": "wh-wansongyuan",
+      "dayId": "d1002",
+      "order": 14
+    },
+    {
+      "poiId": "wh-liangdao-street",
+      "dayId": "d1003",
+      "order": 1
+    },
+    {
+      "poiId": "wh-hubei-museum",
+      "dayId": "d1003",
+      "order": 2
+    },
+    {
+      "poiId": "wh-donghu-boat",
+      "dayId": "d1003",
+      "order": 3
+    },
+    {
+      "poiId": "wh-donghu-kayak",
+      "dayId": "d1003",
+      "order": 4
+    },
+    {
+      "poiId": "wh-lingbomen",
+      "dayId": "d1003",
+      "order": 5
+    },
+    {
+      "poiId": "wh-donghu-huxindao",
+      "dayId": "d1003",
+      "order": 6
+    },
+    {
+      "poiId": "wh-feifei-shrimp-chuhe",
+      "dayId": "d1003",
+      "order": 7
     },
     {
       "poiId": "wh-wuchang-station",
@@ -8315,31 +8763,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "poiId": "yc-ship-lift",
       "dayId": "d1004",
       "order": 8
-    },
-    {
-      "poiId": "wh-liangdao-street",
-      "dayId": "d1003",
-      "order": 1
-    },
-    {
-      "poiId": "wh-hubei-museum",
-      "dayId": "d1003",
-      "order": 2
-    },
-    {
-      "poiId": "wh-donghu-boat",
-      "dayId": "d1003",
-      "order": 3
-    },
-    {
-      "poiId": "wh-lingbomen",
-      "dayId": "d1003",
-      "order": 4
-    },
-    {
-      "poiId": "wh-feifei-shrimp-chuhe",
-      "dayId": "d1003",
-      "order": 5
     },
     {
       "poiId": "wh-tianhe-airport",
@@ -11690,6 +12113,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
         }
         syncing = false;
       };
+
+      const resetButton = bar.querySelector("[data-reset-plan]");
+      if (resetButton) {
+        resetButton.addEventListener("click", () => {
+          const ok = window.confirm("恢复线上默认行程？本机保存的加入/移出/排序改动会被清除（优先级标记保留）。");
+          if (!ok) return;
+          Object.keys(localStorage)
+            .filter((key) => /-plan-v1$/.test(key))
+            .forEach((key) => localStorage.removeItem(key));
+          window.location.reload();
+        });
+      }
 
       pairs.forEach(({ desktop, source }) => {
         desktop.addEventListener("click", () => source.click());
