@@ -3408,7 +3408,8 @@ svg.leaflet-image-layer.leaflet-interactive path {
         "wh-yanyao-shaomai",
         "wh-liuji-sangou",
         "wh-guiping-niuzza",
-        "wh-shengyang-lou"
+        "wh-shengyang-lou",
+        "wh-qingchuan-pavilion"
       ]
     },
     {
@@ -5445,6 +5446,72 @@ svg.leaflet-image-layer.leaflet-interactive path {
       "mapUrl": "https://uri.amap.com/search?keyword=%E4%B8%A5%E8%AE%B0%E8%83%9C%E9%98%B3%E6%A5%BC%C2%B7%E6%B9%96%E5%8C%97%E8%8F%9C%EF%BC%88%E6%B1%9F%E6%B1%89%E8%B7%AF%E5%BA%97%EF%BC%89\u0026city=%E6%AD%A6%E6%B1%89",
       "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E4%B8%A5%E8%AE%B0%E8%83%9C%E9%98%B3%E6%A5%BC%C2%B7%E6%B9%96%E5%8C%97%E8%8F%9C%EF%BC%88%E6%B1%9F%E6%B1%89%E8%B7%AF%E5%BA%97%EF%BC%89%20%E6%AD%A6%E6%B1%89",
       "imageQuery": "严记胜阳楼·湖北菜（江汉路店） 武汉"
+    },
+    {
+      "id": "wh-qingchuan-pavilion",
+      "name": "晴川阁 · 禹稷行宫",
+      "name_zh": "晴川阁 · 禹稷行宫",
+      "city": "武汉",
+      "area": "汉阳 · 龟山东麓",
+      "category": "sight",
+      "coords": [
+        30.5587,
+        114.2798
+      ],
+      "note": "晴川阁与黄鹤楼、古琴台并称“武汉三大名胜”，景区由晴川楼、禹稷行宫、铁门关组成；免费但需预约，周一闭馆、16:30 停止入场。",
+      "contentTier": "standard",
+      "whyWorthIt": "晴川阁在龟山东麓、长江大桥汉阳桥头旁，登楼能同时看到长江大桥、黄鹤楼与两江交汇方向；禹稷行宫（武汉大禹文化博物馆）是景区里祭祀大禹的古建筑群，比黄鹤楼清静得多，和铁门关串起来是一小段完整的汉阳线。",
+      "detailSections": [
+        {
+          "title": "怎么去",
+          "items": [
+            "10/2 线：黄鹤楼之后过江到汉阳，去晴川阁，再从汉阳桥头上长江大桥看日落",
+            "也可从武昌江滩走长江大桥步行过江（约30-40分钟），下桥步行即到景区"
+          ]
+        },
+        {
+          "title": "参观要点",
+          "items": [
+            "免费开放需提前预约；9:00–17:00，16:30 停止入场，每周一闭馆",
+            "夜游晴川阁单独购票，想看夜景可用它替换黄鹤楼夜场"
+          ]
+        }
+      ],
+      "plan": "10/2 下午的备选：替换黄鹤楼，或在黄鹤楼之后加一站（16:00 前入场），17:15 转到汉阳桥头看长江大桥日落。",
+      "tip": "国庆需提前 1–3 天在官方渠道（武汉大禹文化博物馆/夜游晴川阁）预约；周一闭馆，出发前再确认国庆特殊开放安排。",
+      "source": "武汉市晴川阁管理处（武汉大禹文化博物馆）",
+      "evidenceSources": [
+        {
+          "title": "武汉市晴川阁管理处（武汉大禹文化博物馆）：参观须知",
+          "url": "https://www.qcgmuseum.com/list/35.html",
+          "type": "official",
+          "role": "visit",
+          "language": "zh",
+          "supports": [
+            "opening-hours",
+            "reservation",
+            "attraction"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        },
+        {
+          "title": "OpenStreetMap：晴川阁 / 禹稷行宫 / 铁门关点位",
+          "url": "https://www.openstreetmap.org/search?query=%E6%99%B4%E5%B7%9D%E9%98%81",
+          "type": "map",
+          "role": "fact",
+          "language": "zh",
+          "supports": [
+            "coordinates",
+            "location"
+          ],
+          "checkedAt": "2026-09-20",
+          "status": "needs-recheck"
+        }
+      ],
+      "mapUrl": "https://uri.amap.com/search?keyword=%E6%99%B4%E5%B7%9D%E9%98%81%20%C2%B7%20%E7%A6%B9%E7%A8%B7%E8%A1%8C%E5%AE%AB\u0026city=%E6%AD%A6%E6%B1%89",
+      "experienceUrl": "https://www.xiaohongshu.com/search_result?keyword=%E6%99%B4%E5%B7%9D%E9%98%81%20%C2%B7%20%E7%A6%B9%E7%A8%B7%E8%A1%8C%E5%AE%AB%20%E6%AD%A6%E6%B1%89",
+      "imageQuery": "晴川阁 · 禹稷行宫 武汉"
     },
     {
       "id": "yc-yichang-east-station",
@@ -8027,7 +8094,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
       return L.latLng(fromCoords).distanceTo(L.latLng(toCoords)) / 1000;
     };
 
-    const DAY_CANDIDATE_LIMIT = 8;
+    const DAY_CANDIDATE_LIMIT = 12;
     const dayCandidatePriorityRank = { S: 0, A: 1, B: 2, C: 3 };
 
     const getDayCandidatePois = (dayId, dayPois) => {
